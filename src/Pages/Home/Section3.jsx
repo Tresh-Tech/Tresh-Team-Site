@@ -21,7 +21,7 @@ const Section3 = () => {
           <div className="max-w-[calc(100%-900px)] w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45">
             <div className="relative">
               <div className="border w-full border-[rgba(77,77,77, 0.4)] border-dashed"></div>
-              <div className="dotted w-full  rotate-90"></div>
+              <div className="border w-full border-[rgba(77,77,77, 0.4)] border-dashed rotate-90"></div>
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[15px] p-2 bg-white border-primary rounded-full"></div>
             </div>
           </div>
