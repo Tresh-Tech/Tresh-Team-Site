@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  font-family: ;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 .Logo{
   font-family: 'mooli', sans-serif;

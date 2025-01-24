@@ -1,21 +1,22 @@
 import React from "react";
-import TreshMeeting from "../../assets/Images/TeamTresh_meeting.png";
+import TreshMeeting from "../../assets/Images/TeamTresh_meeting.svg";
 import Button from "@/components/Button/Button";
 const Section1 = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <div className="flex py-12 items-center justify-between">
         <div className="flex-1">
-          <h1 className="font-semibold text-5xl">
-            Be part of something Big Team Tresh awaits
+          <h1 className="font-bold text-4xl">
+            Custom Tech Solutions <br />
+            Designed to Elevate Your Brand
           </h1>
-          <p className="text-2xl">
-            Join a team of creatives that are ready to connect with other
-            creatives and work
+          <p className="text-xl font-">
+            From development to deployment, we turn ideas into high-performing
+            solutions.
           </p>
 
           <div className="mt-10">
-            <Button>See members</Button>
+            <Button>Contact us</Button>
           </div>
         </div>
         <div className="w-full max-w-[650px]">
