@@ -1,5 +1,5 @@
 import React from "react";
-import ChainLink from "../../assets/Images/ChainLink.png";
+import ChainLink from "../../assets/Images/Group 47.svg";
 import Manwithphone from "../../assets/Images/Man with phone creating ideas.png";
 import SuccessfulMarketing from "../../assets/Images/Successful marketing team joins forces.png";
 import TreshLogo from "../../assets/Images/Group.svg";
@@ -54,6 +54,9 @@ const Section2 = () => {
               designers, and copywriters dedicated to crafting exceptional
               digital experiences
             </p>
+            <div className="mt-2">
+              <Button variant="plain">See more</Button>
+            </div>
           </div>
         </div>
         <div className="flex items-center gap-36 justify-between">
@@ -76,6 +79,9 @@ const Section2 = () => {
               designers, and copywriters dedicated to crafting exceptional
               digital experiences,
             </p>
+            <div className="mt-2">
+              <Button variant="plain">See more</Button>
+            </div>
           </div>
         </div>
       </div>
