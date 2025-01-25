@@ -1,0 +1,8 @@
+.borderMe{
+    height:1px;
+    background-image: repeating-linear-gradient(90deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px), repeating-linear-gradient(180deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px), repeating-linear-gradient(90deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px), repeating-linear-gradient(180deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px);
+  background-position: left top, right top, left bottom, left top;
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+}
+

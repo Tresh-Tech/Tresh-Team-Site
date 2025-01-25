@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import Button from "./Button/Button";
 const NavBar = () => {
   return (
-    <div className="flex items-center justify-between py-3">
+    <div className="flex items-center justify-between  px-16 py-3">
       <ul>
         <li className="flex items-center Logo space-x-1">
           <img src={Logo} width={50} height={50} alt="" />
