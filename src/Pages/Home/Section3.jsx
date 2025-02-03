@@ -8,14 +8,15 @@ import Button from "@/components/Button/Button";
 const Section3 = () => {
   return (
     <>
-      <div className="py-12 flex flex-col gap-6">
-        <div className="flex flex-col items-center gap-6">
+      <div className="py-12 flex flex-col gap-[30px]">
+        <div className="flex flex-col items-center gap-2.5">
           <h1 className=" text-[40px] leading-[130%] font-semibold">
             Services
           </h1>
-          <p className="text-[24px] leading-[33px] font-medium text-[#3A3A3A]">
-            Join a team of creatives that are ready to connect with other
-            creatives and work
+          <p className="text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
+            At <strong>Tresh</strong> we provide a wide range of technology
+            services tailored to meet the unique needs of businesses of all
+            sizes.
           </p>
         </div>
         <div className="flex relative flex-col items-center w-full p-0 gap-10">
@@ -47,10 +48,14 @@ const Section3 = () => {
             </div>
             <div className=" max-w-[500px] w-full h-[234px] rounded-lg overflow-hidden flex items-center order-2 bg-primary flex-grow-0 border border-[#555555]/30">
               <div className="flex-1">
-                <h1 className="font-medium ml-4 text-3xl">Front-End</h1>
-                <p className="font-semibold ml-3.5 text-lg">Development</p>
-                <p className="flex items-center ml-4 gap-0.5 mt-6">
-                  <FaAngleRight className="bg-black text-white rounded-full p-0.5" />
+                <h1 className="font-medium ml-4 text-3xl text-white">
+                  Front-End
+                </h1>
+                <p className="font-semibold ml-3.5 text-lg text-white">
+                  Development
+                </p>
+                <p className="flex items-center ml-4 text-white gap-0.5 mt-6">
+                  <FaAngleRight className="bg-white text-black rounded-full p-0.5" />
                   Learn More
                 </p>
               </div>
@@ -101,7 +106,7 @@ const Section3 = () => {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <Button>See our work</Button>
+          <Button>See All</Button>
         </div>
       </div>
     </>

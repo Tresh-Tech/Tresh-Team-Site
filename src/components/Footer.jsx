@@ -2,10 +2,18 @@ import React from "react";
 import { Link } from "react-router";
 import Logo from "../assets/Footer Logo.svg";
 import { CiMail } from "react-icons/ci";
+import {
+  FaAngleRight,
+  FaArrowRight,
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <div className="bg-black  px-16">
+      <div className="bg-black flex flex-col gap-[20px] py-12 px-16">
         <div className="flex justify-between items-end">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
@@ -32,7 +40,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-5 border">
+          <div className="flex flex-col gap-5">
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
@@ -55,6 +63,18 @@ const Footer = () => {
         </div>
         <div className="w-full p-0.5 rounded-xl bg-white">
           <div className=" border-dashed border border-black"></div>
+        </div>
+        <div className="flex justify-between items-center">
+          <div className="flex items-center border w-fit rounded-[4px] gap-[41px] p-2">
+            <h1 className="text-white">English</h1>
+            <FaAngleRight color="white" size={20} />
+          </div>
+          <div className="flex items-center gap-[41px]">
+            <FaTwitter size={25} color="#4CD2FF" />
+            <FaFacebook size={25} color="#4C8AFF" />
+            <FaLinkedin size={25} color="#5378D0" />
+            <FaYoutube size={25} color="#FF4C4C" />
+          </div>
         </div>
       </div>
     </>
