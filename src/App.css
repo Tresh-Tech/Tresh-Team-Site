@@ -6,3 +6,14 @@
   background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
 }
 
+.scroller::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+.mama{
+  background-color: #1d4ed8;
+  background: linear-gradient(90deg,
+  rgba(29, 78, 216, 0.1) 0%, 
+  rgb(29, 78, 216) 50%, 
+   rgba(29, 78, 216, 0.1) 100%);
+}

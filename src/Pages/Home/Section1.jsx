@@ -4,11 +4,10 @@ import Button from "@/components/Button/Button";
 const Section1 = () => {
   return (
     <>
-      <div className="flex py-12 items-center justify-between">
+      <div className="flex py-12 px-6 items-center justify-between">
         <div className="flex-1">
           <h1 className="font-bold text-4xl">
-            Custom Tech Solutions <br />
-            Designed to Elevate Your Brand
+            Revolutionizing Business Through Innovative Technology.
           </h1>
           <p className="text-xl font-">
             From development to deployment, we turn ideas into high-performing
@@ -16,7 +15,7 @@ const Section1 = () => {
           </p>
 
           <div className="mt-10">
-            <Button>Contact us</Button>
+            <Button>Learn More</Button>
           </div>
         </div>
         <div className="w-full max-w-[650px]">

@@ -1,8 +1,9 @@
 import React from "react";
 import Logo from "../assets/treshteam_logo.svg";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import Button from "./Button/Button";
 const NavBar = () => {
+  const location = useLocation();
   return (
     <div className="flex items-center justify-between  px-16 py-3">
       <ul>
@@ -12,14 +13,45 @@ const NavBar = () => {
         </li>
       </ul>
       <ul className="flex items-center space-x-10 text-lg font-medium">
-        <li>
-          <Link>Services</Link>
+        <li className=" rounded-[30px] overflow-hidden p-1">
+          <Link className="relative group" to="/">
+            Home
+            <div
+              className={`${
+                location.pathname === "/" ? "mama" : ""
+              } absolute w-full h-0.5 transition-all duration-300`}
+            ></div>
+          </Link>
         </li>
-        <li>
-          <Link>Projects</Link>
+        <li className=" rounded-[30px] overflow-hidden p-1">
+          <Link className="relative group" to="/services">
+            Services
+            <div
+              className={`${
+                location.pathname === "/services" ? "mama" : ""
+              } absolute w-full h-0.5 transition-all duration-300`}
+            ></div>
+          </Link>
         </li>
-        <li>
-          <Link>About us</Link>
+        <li className=" rounded-[30px] overflow-hidden p-1">
+          <Link className="relative group" to="/projects">
+            Projects
+            <div
+              className={`${
+                location.pathname === "/projects" ? "mama" : ""
+              } absolute w-full h-0.5 transition-all duration-300`}
+            ></div>
+          </Link>
+        </li>
+        <li className=" rounded-[30px] overflow-hidden p-1">
+          <Link className="relative group" to="/about-us">
+            About us
+            <div
+              className={`${
+                location.pathname === "/about-us" ? "mama" : ""
+              } absolute w-full h-0.5 transition-all duration-300`}
+            ></div>
+          </Link>
         </li>
       </ul>
       {/* <button className="bg-primary text-white rounded-3xl py-2.5 px-5">

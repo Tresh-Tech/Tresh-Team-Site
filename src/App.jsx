@@ -1,18 +1,27 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./Pages/Home/Home";
 import Footer from "./components/Footer";
+import Services from "./Pages/Services/Services";
+import AllProjects from "./Pages/Projects/AllProjects";
+import AboutUs from "./Pages/AboutUs/AboutUs";
+import ServicesDetails from "./Pages/Services/ServicesDetails";
 
 function App() {
   return (
-    <>
-      <div className="min-h-screen bg-white flex flex-col">
-        <NavBar />
-        <Home />
-        <Footer />
-      </div>
-    </>
+    <div className="min-h-screen bg-white flex flex-col">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<AllProjects />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/services/details/:id" element={<ServicesDetails />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
