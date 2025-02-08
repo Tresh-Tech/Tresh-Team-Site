@@ -1,9 +1,10 @@
 import React from "react";
 import Logo from "../assets/treshteam_logo.svg";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button/Button";
 const NavBar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-between  px-16 py-3">
       <ul>
@@ -57,7 +58,7 @@ const NavBar = () => {
       {/* <button className="bg-primary text-white rounded-3xl py-2.5 px-5">
         Contact Us
       </button> */}
-      <Button>Contact Us</Button>
+      <Button onClick={() => navigate('/contact-us')}>Contact Us</Button>
     </div>
   );
 };

@@ -12,6 +12,12 @@
   background-color: #1d4ed8;
   color: white;
 }
+.btn-contactForm{
+  background-color: #1d4ed8;
+  color: white;
+  margin: auto;
+  width: calc(800px - 50%);
+}
 .btn-plain {
   background-color: #ffffff;
   color: black;
