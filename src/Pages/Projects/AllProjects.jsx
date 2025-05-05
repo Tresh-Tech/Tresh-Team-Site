@@ -1,10 +1,13 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import eComm from "../../assets/Images/Ecommerce.svg";
 import Desktop22 from "../../assets/Images/Desktop22.png";
-import Car from "../../assets/Images/Car.png";
+import Car from "../../assets/Images/Car.jpg";
 import Frame161 from "../../assets/Images/Frame161.png";
 import Button from "@/components/Button/Button";
+import { ContentData } from "./ContentData";
 const AllProjects = () => {
+  const navigate = useNavigate();
   return (
     <div className="py-12 px-16 flex flex-col flex-1 gap-[30px]">
       <div className="flex flex-col items-center gap-[30px]">
@@ -13,9 +16,39 @@ const AllProjects = () => {
           Our work speaks for itself.
         </p>
       </div>
-      <div className="flex flex-col items-center gap-[40px]">
+
+      <div className=" border border-black grid grid-cols-2 gap-10 place-items-center">
+        {ContentData.map((data, Id) => (
+          <Link key={Id} to={`/projects/details/${Id}`}>
+            <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
+                {data.businessType}
+              </h1>
+              <img src={data.homepg} alt="Ecommerce site" className="w-full h-auto" />
+              <div className="flex justify-between items-end">
+                <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
+                  <h1 className="font-medium text-2xl leading-[24px]">
+                    {data.title}
+                  </h1>
+                  <p className="font-normal leading-[24px] text-[#3A3A3A]">
+                    {data.description}
+                  </p>
+                </div>
+                <div className="flex-1 flex justify-end">
+                  <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                    View
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* <div className="flex flex-col items-center gap-[40px]">
         <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <Link  to="/projects/details/1" state={{ id: 1, src: eComm }}>
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
               E-commerce
             </h1>
@@ -37,7 +70,8 @@ const AllProjects = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          </Link>
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <div className="flex items-center justify-between">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 Tourism
@@ -76,7 +110,7 @@ const AllProjects = () => {
           </div>
         </div>
         <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
               Management
             </h1>
@@ -96,7 +130,7 @@ const AllProjects = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <div className="flex items-center justify-between">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 Dealership
@@ -120,7 +154,7 @@ const AllProjects = () => {
           </div>
         </div>
         <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
               Website Vendor (Web And Mobile app)
             </h1>
@@ -144,7 +178,7 @@ const AllProjects = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <div className="flex items-center justify-between">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 Dealership
@@ -170,16 +204,18 @@ const AllProjects = () => {
           </div>
         </div>
         <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
               Home Rental (Mobile)
             </h1>
-            <img src={Frame161} alt="Ecommerce site" className="w-full h-auto" />
+            <img
+              src={Frame161}
+              alt="Ecommerce site"
+              className="w-full h-auto"
+            />
             <div className="flex justify-between items-end">
               <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">
-                  Bahay
-                </h1>
+                <h1 className="font-medium text-2xl leading-[24px]">Bahay</h1>
                 <p className="font-normal leading-[24px] text-[#3A3A3A]">
                   A shoe store web application which simplifies user purchase
                   process
@@ -192,7 +228,7 @@ const AllProjects = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <div className="flex items-center justify-between">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 Dealership
@@ -217,7 +253,7 @@ const AllProjects = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -31,8 +31,6 @@ export const ContentData = {
     description: "Creating visually stunning designs for your brand.",
   },
   8: {
-    src: MaleII,
-    alt: "Code editing",
     title: "Web Development",
     description: "Building responsive and functional websites.",
   },

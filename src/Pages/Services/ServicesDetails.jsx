@@ -9,12 +9,7 @@ const ServicesDetails = () => {
 
   const imageSrc = location.state?.src;
   const details = ContentData[id];
-  useEffect(() => {
-    const gwt = () => {
-      console.log(ContentData[id]);
-    };
-    gwt();
-  }, []);
+  
 
   if (!details || !imageSrc) return <p>image not found</p>;
   return (

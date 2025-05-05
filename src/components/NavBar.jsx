@@ -58,7 +58,9 @@ const NavBar = () => {
       {/* <button className="bg-primary text-white rounded-3xl py-2.5 px-5">
         Contact Us
       </button> */}
-      <Button onClick={() => navigate('/contact-us')}>Contact Us</Button>
+      <Button
+        className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]"
+        onClick={() => navigate('/contact-us')}>Contact Us</Button>
     </div>
   );
 };
