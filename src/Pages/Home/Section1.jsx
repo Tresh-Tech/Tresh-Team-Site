@@ -15,7 +15,7 @@ const Section1 = () => {
           </p>
 
           <div className="mt-10">
-            <Button>Learn More</Button>
+            <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">Learn More</Button>
           </div>
         </div>
         <div className="w-full max-w-[650px]">

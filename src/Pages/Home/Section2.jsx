@@ -30,7 +30,9 @@ const Section2 = () => {
               digital experiences.
             </p>
             <div className="mt-2">
-              <Button variant="plain">See more</Button>
+              <Button className="shadow-md border border-[##4D4D4D1A] bg-transparent text-black py-2.5 text-sm leading-[19px] font-normal px-5 rounded-[30px]">
+                See more
+              </Button>
             </div>
           </div>
         </div>
@@ -55,7 +57,7 @@ const Section2 = () => {
               digital experiences
             </p>
             <div className="mt-2">
-              <Button variant="plain">See more</Button>
+              <Button className="shadow-md border border-[##4D4D4D1A] bg-transparent text-black py-2.5 text-sm leading-[19px] font-normal px-5 rounded-[30px]">See more</Button>
             </div>
           </div>
         </div>
@@ -80,7 +82,7 @@ const Section2 = () => {
               digital experiences,
             </p>
             <div className="mt-2">
-              <Button variant="plain">See more</Button>
+              <Button className="shadow-md border border-[##4D4D4D1A] bg-transparent text-black py-2.5 text-sm leading-[19px] font-normal px-5 rounded-[30px]">See more</Button>
             </div>
           </div>
         </div>

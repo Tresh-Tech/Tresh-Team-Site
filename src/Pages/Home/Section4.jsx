@@ -69,7 +69,7 @@ const Section4 = () => {
           </div>
         </div>
         <div className="flex items-center justify-center">
-          <Button>View our project</Button>
+          <Button className="shadow-md border border-[##4D4D4D1A] bg-[#1d4ed8] text-white py-2.5 font-normal px-5 rounded-[30px]">View our project</Button>
         </div>
       </div>
     </>
