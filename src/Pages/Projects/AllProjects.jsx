@@ -17,27 +17,39 @@ const AllProjects = () => {
         </p>
       </div>
 
-      <div className=" border border-black grid grid-cols-2 gap-10 place-items-center">
+      <div className=" grid grid-cols-2 gap-10 place-items-center">
         {ContentData.map((data, Id) => (
           <Link key={Id} to={`/projects/details/${Id}`}>
             <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 {data.businessType}
               </h1>
-              <img src={data.homepg} alt="Ecommerce site" className="w-full h-auto" />
-              <div className="flex justify-between items-end">
-                <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                  <h1 className="font-medium text-2xl leading-[24px]">
+              <img
+                src={data.homepg}
+                alt="Ecommerce site"
+                className="w-full max-h-[275px] h-auto"
+              />
+              <div className="flex flex-col gap-2.5 flex-auto">
+                  <h1 className="font-medium text-2xl w-full">
                     {data.title}
                   </h1>
-                  <p className="font-normal leading-[24px] text-[#3A3A3A]">
+                <div className="flex gap-5 h-full">
+                  <p
+                    style={{
+                      display: "-webkit-box",
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                    }}
+                    className="font-normal leading-[24px] text-[#3A3A3A]"
+                  >
                     {data.description}
                   </p>
-                </div>
-                <div className="flex-1 flex justify-end">
-                  <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                    View
-                  </Button>
+                  <div className="flex items-end">
+                    <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                      View
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
