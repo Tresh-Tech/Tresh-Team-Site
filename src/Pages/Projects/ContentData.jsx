@@ -13,6 +13,7 @@ export const ContentData = [
     title: "Car Website",
     description:
       "Find your perfect ride from our wide selection of new and used cars — trusted deals, quality vehicles, and exceptional service.",
+    forSale: false,
   },
   {
     businessType: "E-commerce",
@@ -22,6 +23,7 @@ export const ContentData = [
     title: "Dashboard Mangement",
     description:
       "A shoe store web application which simplifies user purchase process.",
+    forSale: true,
   },
   {
     businessType: "Website Vendor (Web And Mobile app)",
@@ -29,8 +31,7 @@ export const ContentData = [
     homepg: Wei,
     projectLink: "",
     title: "Wei",
-    description:
-      "Your Vision, Our expertise, Unparalleled Results.",
+    description: "Your Vision, Our expertise, Unparalleled Results.",
   },
   {
     businessType: "Dealership",

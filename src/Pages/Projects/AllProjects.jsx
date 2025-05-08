@@ -21,18 +21,25 @@ const AllProjects = () => {
         {ContentData.map((data, Id) => (
           <Link key={Id} to={`/projects/details/${Id}`}>
             <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-                {data.businessType}
-              </h1>
+              <div className="flex justify-between items-center">
+                <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
+                  {data.businessType}
+                </h1>
+                {data.forSale ? (
+                  <span className="bg-[#11CD00] text-white border rounded-md text-base leading-[100%] flex items-center py-1.5 px-2">
+                    For Sale
+                  </span>
+                ) : (
+                  ""
+                )}
+              </div>
               <img
                 src={data.homepg}
                 alt="Ecommerce site"
                 className="w-full max-h-[275px] h-auto"
               />
               <div className="flex flex-col gap-2.5 flex-auto">
-                  <h1 className="font-medium text-2xl w-full">
-                    {data.title}
-                  </h1>
+                <h1 className="font-medium text-2xl w-full">{data.title}</h1>
                 <div className="flex gap-5 h-full">
                   <p
                     style={{
@@ -45,10 +52,23 @@ const AllProjects = () => {
                   >
                     {data.description}
                   </p>
-                  <div className="flex items-end">
-                    <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                      View
-                    </Button>
+                  <div>
+                    {data.forSale ? (
+                      <div className="flex gap-5">
+                        <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                          Cart
+                        </Button>
+                        <Button className="shadow-md bg-white text-[#1d4ed8] border border-[#1d4ed8] py-2.5 px-5 rounded-[30px]">
+                          Demo
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="flex items-end">
+                        <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                          View
+                        </Button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
