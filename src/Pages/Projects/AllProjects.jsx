@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import eComm from "../../assets/Images/Ecommerce.svg";
 import Desktop22 from "../../assets/Images/Desktop22.png";
@@ -8,6 +8,21 @@ import Button from "@/components/Button/Button";
 import { ContentData } from "./ContentData";
 const AllProjects = () => {
   const navigate = useNavigate();
+  const [cart, setCart] = useState(() => {
+    const stored = localStorage.getItem('cart');
+    return stored ? JSON.parse(stored) : []
+  })
+
+  const pushToCart = (projectData) => {
+    const newCart = [...cart, projectData];
+    setCart(newCart);
+  }
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart])
+  
+  
   return (
     <div className="py-12 px-16 flex flex-col flex-1 gap-[30px]">
       <div className="flex flex-col items-center gap-[30px]">
@@ -19,61 +34,63 @@ const AllProjects = () => {
 
       <div className=" grid grid-cols-2 gap-10 place-items-center">
         {ContentData.map((data, Id) => (
-          <Link key={Id} to={`/projects/details/${Id}`}>
-            <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-              <div className="flex justify-between items-center">
-                <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-                  {data.businessType}
-                </h1>
-                {data.forSale ? (
-                  <span className="bg-[#11CD00] text-white border rounded-md text-base leading-[100%] flex items-center py-1.5 px-2">
-                    For Sale
-                  </span>
-                ) : (
-                  ""
-                )}
-              </div>
+          <div key={Id} className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+            <div className="flex justify-between items-center">
+              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
+                {data.businessType}
+              </h1>
+              {data.forSale ? (
+                <span className="bg-[#11CD00] text-white border rounded-md text-base leading-[100%] flex items-center py-1.5 px-2">
+                  For Sale
+                </span>
+              ) : (
+                ""
+              )}
+            </div>
+            <Link to={`/projects/details/${Id}`}>
               <img
                 src={data.homepg}
                 alt="Ecommerce site"
                 className="w-full max-h-[275px] h-auto"
               />
-              <div className="flex flex-col gap-2.5 flex-auto">
-                <h1 className="font-medium text-2xl w-full">{data.title}</h1>
-                <div className="flex gap-5 h-full">
-                  <p
-                    style={{
-                      display: "-webkit-box",
-                      WebkitLineClamp: 3,
-                      WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
-                    }}
-                    className="font-normal leading-[24px] text-[#3A3A3A]"
-                  >
-                    {data.description}
-                  </p>
-                  <div>
-                    {data.forSale ? (
-                      <div className="flex gap-5">
-                        <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                          Cart
-                        </Button>
-                        <Button className="shadow-md bg-white text-[#1d4ed8] border border-[#1d4ed8] py-2.5 px-5 rounded-[30px]">
-                          Demo
-                        </Button>
-                      </div>
-                    ) : (
-                      <div className="flex items-end">
-                        <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                          View
-                        </Button>
-                      </div>
-                    )}
-                  </div>
+            </Link>
+            <div className="flex flex-col gap-2.5 flex-auto">
+              <h1 className="font-medium text-2xl w-full">{data.title}</h1>
+              <div className="flex gap-5 h-full">
+                <p
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+                  className="font-normal leading-[24px] text-[#3A3A3A]"
+                >
+                  {data.description}
+                </p>
+                <div>
+                  {data.forSale ? (
+                    <div className="flex gap-5">
+                      <Button
+                        onClick={() => pushToCart(data)}
+                        className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                        Cart
+                      </Button>
+                      <Button className="shadow-md bg-white text-[#1d4ed8] border border-[#1d4ed8] py-2.5 px-5 rounded-[30px]">
+                        Demo
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="flex items-end">
+                      <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                        View
+                      </Button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 

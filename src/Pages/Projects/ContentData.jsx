@@ -6,11 +6,11 @@ import WeiLogo from "../../assets/Images/Wei.svg";
 import dBManagement from "../../assets/Images/DashBoard Management.jpg";
 export const ContentData = [
   {
-    businessType: "Dealership",
+    businessType: "Car Dealership",
     logo: ProjectCar,
     homepg: Car,
     projectLink: "",
-    title: "Car Website",
+    title: "Cars Rift",
     description:
       "Find your perfect ride from our wide selection of new and used cars — trusted deals, quality vehicles, and exceptional service.",
     forSale: false,
@@ -24,6 +24,7 @@ export const ContentData = [
     description:
       "A shoe store web application which simplifies user purchase process.",
     forSale: true,
+    price: 400
   },
   {
     businessType: "Website Vendor (Web And Mobile app)",
@@ -32,15 +33,18 @@ export const ContentData = [
     projectLink: "",
     title: "Wei",
     description: "Your Vision, Our expertise, Unparalleled Results.",
+    forSale: false,
   },
   {
-    businessType: "Dealership",
+    businessType: "Car Dealership",
     logo: ProjectCar,
     homepg: Car,
     projectLink: "",
-    title: "Car Website",
+    title: "Cars Rift",
     description:
       "We're a passionate collective of web developers, UI/UX designers, and copywriters dedicated to crafting exceptional.",
+      forSale: true,
+      price: 1200
   },
   {
     businessType: "Dealership",
