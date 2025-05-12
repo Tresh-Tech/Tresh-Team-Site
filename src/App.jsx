@@ -10,6 +10,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import ServicesDetails from "./Pages/Services/ServicesDetails";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AllProjectsDetails from "./Pages/Projects/AllProjectsDetails";
+import CartPg from "./Pages/Cart/CartPg";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/services/details/:id" element={<ServicesDetails />} />
         <Route path="/projects/details/:id" element={<AllProjectsDetails />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/cart" element={<CartPg />} />
       </Routes>
       <Footer />
     </div>
