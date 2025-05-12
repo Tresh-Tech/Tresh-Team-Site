@@ -1,9 +1,9 @@
-import ProjectCar from "../../assets/Images/ProjectCar.png";
-import dbManagementLogo from "../../assets/Images/dbManagement Logo.svg";
-import Car from "../../assets/Images/Car.jpg";
-import Wei from "../../assets/Images/Wei.jpg";
+import ProjectCar from "../../assets/Images/ProjectCar.svg";
+import Car from "../../assets/Images/Main Design 1.svg";
 import WeiLogo from "../../assets/Images/Wei.svg";
-import dBManagement from "../../assets/Images/DashBoard Management.jpg";
+import Wei from "../../assets/Images/WeiDb.svg";
+import dbManagementLogo from "../../assets/Images/dbManagement Logo.svg";
+import dBManagement from "../../assets/Images/dbmanagement.svg";
 export const ContentData = [
   {
     businessType: "Car Dealership",

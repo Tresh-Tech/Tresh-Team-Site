@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectCar from "../../assets/Images/ProjectCar.png";
 import { useLocation, useParams, useNavigate } from "react-router";
 import { FaAngleLeft } from "react-icons/fa6";
 import { ContentData } from "./ContentData";
@@ -54,7 +53,7 @@ const AllProjectsDetails = () => {
           <img
             src={data.homepg}
             alt="Car Dealership"
-            className="w-full h-auto"
+            className="w-full h-[650px]"
           />
           <div className="flex gap-[30px] w-full justify-center">
             <Button

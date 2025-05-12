@@ -25,6 +25,7 @@ function App() {
         <Route path="/projects/details/:id" element={<AllProjectsDetails />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cart" element={<CartPg />} />
+        {/* <Route path="/*" element={<404 />} /> */}
       </Routes>
       <Footer />
     </div>
