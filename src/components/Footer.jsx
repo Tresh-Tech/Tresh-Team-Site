@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-black flex flex-col gap-[20px] py-12 px-16">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end">
+        <div className="flex gap-8 md:gap-0 flex-col md:flex-row md:justify-between md:items-end">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
@@ -26,7 +26,7 @@ const Footer = () => {
                 creatives and work
               </p>
             </div>
-            <ul className="flex items-center gap-[70px] text-lg font-medium">
+            <ul className="flex items-center gap-4 md:gap-[70px] text-lg font-medium">
               <li className="text-lg font-normal leading-[120%] text-white">
                 <Link>Services</Link>
               </li>
@@ -42,7 +42,7 @@ const Footer = () => {
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
-            <div className="flex items-center w-fit">
+            <div className="flex items-center w-full md-w-fit">
               <div className="flex items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
                 <CiMail color="white" size={20} />
                 <input
@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="w-full p-0.5 rounded-xl bg-white">
           <div className=" border-dashed border border-black"></div>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+        <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex items-center border w-fit rounded-[4px] gap-[41px] p-2">
             <h1 className="text-white">English</h1>
             <FaAngleRight color="white" size={20} />
