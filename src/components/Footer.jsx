@@ -38,11 +38,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="relative flex flex-col gap-5">
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
-            <div className="flex items-center w-full md-w-fit">
+            <div className="flex items-center w-full md:w-fit">
               <div className="flex items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
                 <CiMail color="white" size={20} />
                 <input
