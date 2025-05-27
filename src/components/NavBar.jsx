@@ -15,7 +15,7 @@ const NavBar = () => {
   }
   return (
     <div className="relative flex items-center justify-between px-7 md:px-16 py-3">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+      <div className="flex flex-wrap items-center justify-between w-full">
         <ul className="flex items-center justify-between w-full">
         <li className="flex items-center Logo space-x-1">
           <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
@@ -33,7 +33,7 @@ const NavBar = () => {
           {pages.map((page, index) => (
         <li key={index} className="rounded-[30px] overflow-hidden p-1">
           <Link className={`${
-               location.pathname === "/" ? "mama" : ""
+               location.pathname === page.path ? "mama" : ""
           } block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`} to={page.path}>
             {page.name}
           </Link>
