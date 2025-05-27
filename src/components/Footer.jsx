@@ -26,7 +26,7 @@ const Footer = () => {
                 creatives and work
               </p>
             </div>
-            <ul className="flex items-center gap-4 md:gap-[70px] text-lg font-medium">
+            <ul className="flex flex-col items-start gap-4 md:gap-[70px] text-lg font-medium">
               <li className="text-lg font-normal leading-[120%] text-white">
                 <Link>Services</Link>
               </li>
@@ -38,18 +38,18 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="relative flex flex-col gap-5">
+          <div className="relative w-full flex items-start flex-col gap-5">
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
             <div className="flex items-center w-full md:w-fit">
-              <div className="flex items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
+              <div className="flex w-auto items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
                 <CiMail color="white" size={20} />
                 <input
                   type="email"
-                  name=""
+                  name="email"
                   id="email"
-                  className="outline-none flex-1 py-3 border-none bg-transparent text-[#DEE1E6]"
+                  className="outline-none w-auto py-3 border-none bg-transparent text-[#DEE1E6]"
                   placeholder="Input your email"
                 />
               </div>
