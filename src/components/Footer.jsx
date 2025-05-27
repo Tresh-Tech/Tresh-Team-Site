@@ -13,13 +13,13 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="bg-black flex flex-col gap-[20px] py-12 px-16">
+      <div className="bg-black flex flex-col gap-[20px] py-12 px-7 md:px-16">
         <div className="flex gap-8 md:gap-0 flex-col md:flex-row md:justify-between md:items-end">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
                 <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
-                <h1 className="text-md md:text-xl font-semibold uppercase">Team Tresh</h1>
+                <h1 className="text-md md:text-xl text-white font-semibold uppercase">Team Tresh</h1>
               </div>
               <p className="text-md md:text-[20px] leading-[27px] text-white">
                 Join a team of creatives that are ready to connect with other
