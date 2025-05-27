@@ -21,7 +21,7 @@ const Footer = () => {
                 <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
                 <h1 className="text-md md:text-xl font-semibold uppercase">Team Tresh</h1>
               </div>
-              <p className="text-[20px] leading-[27px] text-white">
+              <p className="text-md md:text-[20px] leading-[27px] text-white">
                 Join a team of creatives that are ready to connect with other
                 creatives and work
               </p>
