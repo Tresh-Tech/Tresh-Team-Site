@@ -14,14 +14,12 @@ const Footer = () => {
   return (
     <>
       <div className="bg-black flex flex-col gap-[20px] py-12 px-16">
-        <div className="flex justify-between items-end">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
-                <img src={Logo} width={70} height={70} alt="" />
-                <h1 className="text-[34px] text-white leading-[66px] font-bold uppercase">
-                  Team Tresh
-                </h1>
+                <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
+                <h1 className="text-md md:text-xl font-semibold uppercase">Team Tresh</h1>
               </div>
               <p className="text-[20px] leading-[27px] text-white">
                 Join a team of creatives that are ready to connect with other
@@ -64,7 +62,7 @@ const Footer = () => {
         <div className="w-full p-0.5 rounded-xl bg-white">
           <div className=" border-dashed border border-black"></div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex items-center border w-fit rounded-[4px] gap-[41px] p-2">
             <h1 className="text-white">English</h1>
             <FaAngleRight color="white" size={20} />
