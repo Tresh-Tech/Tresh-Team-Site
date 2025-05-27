@@ -15,8 +15,8 @@ const NavBar = () => {
   }
   return (
     <div className="relative flex items-center justify-between px-7 md:px-16 py-3">
-      <div className="flex flex-wrap items-center justify-between w-full">
-        <ul className="flex items-center justify-between w-full">
+      <div className="flex flex-wrap items-center justify-between">
+        <ul className="flex items-center justify-between">
         <li className="flex items-center Logo space-x-1">
           <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
           <h1 className="text-md md:text-xl font-semibold uppercase">Team Tresh</h1>
