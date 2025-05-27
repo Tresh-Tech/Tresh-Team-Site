@@ -49,7 +49,7 @@ const Footer = () => {
                   type="email"
                   name=""
                   id="email"
-                  className="outline-none py-3 border-none bg-transparent text-[#DEE1E6]"
+                  className="outline-none flex-1 py-3 border-none bg-transparent text-[#DEE1E6]"
                   placeholder="Input your email"
                 />
               </div>
