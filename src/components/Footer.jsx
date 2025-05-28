@@ -42,14 +42,14 @@ const Footer = () => {
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
-            <div className="flex items-center min-w-[150px] max-w-[250px] md:min-w-fit md:min-w-fit md:w-fit">
-              <div className="flex w-auto items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
+            <div className="flex items-center min-w-[150px] w-[250px] md:min-w-fit md:min-w-fit md:w-fit">
+              <div className="flex items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
                 <CiMail color="white" size={20} />
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className="outline-none w-auto py-3 border-none bg-transparent text-[#DEE1E6]"
+                  className="outline-none w-[150px] md:w-auto py-3 border-none bg-transparent text-[#DEE1E6]"
                   placeholder="Input your email"
                 />
               </div>
