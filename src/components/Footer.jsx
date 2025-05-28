@@ -27,14 +27,17 @@ const Footer = () => {
               </p>
             </div>
             <ul className="flex flex-col items-start gap-4 md:gap-[70px] text-lg font-medium">
-              <li className="text-lg font-normal leading-[120%] text-white">
-                <Link>Services</Link>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/">Home</Link>
               </li>
-              <li className="text-lg font-normal leading-[120%] text-white">
-                <Link>Projects</Link>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/service">Services</Link>
               </li>
-              <li className="text-lg font-normal leading-[120%] text-white">
-                <Link>About us</Link>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/about-us">About us</Link>
               </li>
             </ul>
           </div>
@@ -42,7 +45,7 @@ const Footer = () => {
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
-            <div className="flex items-center min-w-[150px] w-[250px] md:min-w-fit md:min-w-fit md:w-fit">
+            <div className="flex items-center min-w-[150px] w-[250px] md:min-w-fit md:w-fit">
               <div className="flex items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
                 <CiMail color="white" size={20} />
                 <input
