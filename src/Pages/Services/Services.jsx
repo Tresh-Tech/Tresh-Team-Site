@@ -15,8 +15,8 @@ const Services = () => {
           This is what we offer
         </p>
       </div>
-      <div className=" flex bg-green-400 flex-col gap-[40px] justify-center items-center">
-        <div className="w-full bg-red-400 flex flex-col gap-y-10">
+      <div className=" flex flex-col gap-[40px] justify-center items-center">
+        <div className="w-full flex flex-col gap-y-10">
           {/* flex 1 */}
           <div className="flex flex-col md:flex-row w-full gap-[40px] justify-center items-center flex-1">
             <Link to="/services/details/1" state={{ id: 1, src: Male }}>
