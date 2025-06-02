@@ -63,12 +63,14 @@ const AllProjects = () => {
             </Link>
             <div className="flex flex-col gap-2.5 flex-auto">
               <h1 className="font-medium text-2xl w-full">{data.title}</h1>
-              <div className="flex flex-wrap md:flex-nowrap gap-5 h-full">
+              <div className="flex flex-wrap lg:flex-nowrap gap-5 h-full">
                 <p
                   
-                  className="font-normal min-w-[150px] line-clamp-3 leading-[24px] text-[#3A3A3A]"
+                  className="font-normal min-w-[150px] leading-[24px] text-[#3A3A3A]"
                 >
-                  {data.description}
+                  <div className="line-clamp-3">
+                    {data.description}
+                  </div>
                 </p>
                 <div>
                   {data.forSale ? (
