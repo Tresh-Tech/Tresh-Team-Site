@@ -198,88 +198,81 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap flex-col gap-[30px]">
-        <div className="flex flex-col items-center gap-5">
-          <h1 className=" text-[40px] text-center leading-[130%] font-bold">
-            Development Process
-          </h1>
-          <p className="text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
-            Our formula
-          </p>
-        </div>
-        <div className="flex flex-col gap-[30px]">
-          <div className="flex flex-wrap gap-[50px] justify-between items-center">
-            <div className="relative flex max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center relative">
-              <div className="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
-                <h1 className="font-medium text-[20px] leading-[24px] ">
-                  1. Client Meeting
-                </h1>
-                <p className="text-[#3A3A3A] text-[16px] leading-[24px] ">
-                  We are always on the lookout for a new cutting edge technology
-                  to quickly deploy for our customer to take competitive
-                  advantage in the market.
-                </p>
-              </div>
-              <div className="flex justify-end items-end self-stretch width-[150px]">
-                <img src={teamMeet} alt="Team-Meeting" className="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]"/>
-              </div>
+      <div class="flex flex-col gap-[30px]">
+        <div class="flex flex-wrap gap-[50px] justify-between items-center">
+          
+          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+              <h1 class="font-medium text-[20px] leading-[24px] ">
+                1. Client Meeting
+              </h1>
+              <p class="text-[#3A3A3A] text-[16px] leading-[24px] ">
+                We are always on the lookout for a new cutting edge technology
+                to quickly deploy for our customer to take competitive
+                advantage in the market.
+              </p>
             </div>
-            <div className="max-w-[580px] py-2.5 px-5 border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center relative">
-              <div className="flex flex-col gap-2 max-w-[400px] w-full">
-                <h1 className="font-medium text-[20px] leading-[24px] ">
-                  2. Quotation
-                </h1>
-                <p className="relative text-[#3A3A3A] text-[16px] leading-[24px] ">
-                  Software programs have become very useful these days. When
-                  looking for software programs to use for your business, you
-                  would want the best one that is within your price range.
-                </p>
-              </div>
-              <img
-                src={quote}
-                alt="Quote"
-                className="flex-1 absolute right-0 bottom-0"
-              />
+            <div class="flex justify-end items-end self-stretch width-[150px]">
+              <img src={teamMeet} alt="Team-Meeting" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
             </div>
           </div>
-        </div>
-        <div className="flex flex-col gap-[30px]">
-          <div className="flex flex-wrap gap-[50px] justify-between items-center">
-            <div className="max-w-[580px] py-2.5 px-5 border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center relative">
-              <div className="flex flex-col gap-2 max-w-[400px] w-full">
-                <h1 className="font-medium text-[20px] leading-[24px] ">
-                  3. Software Development
-                </h1>
-                <p className="text-[#3A3A3A] text-[16px] leading-[24px] ">
-                  Software programs have become very useful these days. When
-                  looking for software programs to use for your business, you
-                  would want the best one that is within your price range.
-                </p>
-              </div>
-              <img
-                src={devLang}
-                alt="Dev-Language"
-                className="flex-1 absolute right-0 bottom-0"
-              />
+          
+          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+              <h1 class="font-medium text-[20px] leading-[24px] ">
+                2. Quotation
+              </h1>
+              <p class="relative text-[#3A3A3A] text-[16px] leading-[24px] ">
+                Software programs have become very useful these days. When
+                looking for software programs to use for your business, you
+                would want the best one that is within your price range.
+              </p>
             </div>
-            <div className="max-w-[580px] py-2.5 px-5 border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center relative">
-              <div className="flex flex-col gap-2 max-w-[400px] w-full">
-                <h1 className="font-medium text-[20px] leading-[24px] ">
-                  4. Launch
-                </h1>
-                <p className="text-[#3A3A3A] text-[16px] leading-[24px] ">
-                  Software programs have become very useful these days. When
-                  looking for software programs to use for your business, you
-                  would want the best one that is within your price range.
-                </p>
-              </div>
-              <img
-                src={mobileApp}
-                alt="Team-Meeting"
-                className="flex-1 absolute right-0 bottom-0"
-              />
+            <div class="flex justify-end items-end self-stretch width-[150px]">
+              <img src={quote} alt="Quote" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
             </div>
           </div>
+          
+        </div>
+      </div>
+      
+      
+      
+      <div class="flex flex-col gap-[30px]">
+        <div class="flex flex-wrap gap-[50px] justify-between items-center">
+          
+          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+              <h1 class="font-medium text-[20px] leading-[24px] ">
+                3. Software Development
+              </h1>
+              <p class="text-[#3A3A3A] text-[16px] leading-[24px] ">
+                Software programs have become very useful these days. When
+                looking for software programs to use for your business, you
+                would want the best one that is within your price range.
+              </p>
+            </div>
+            <div class="flex justify-end items-end self-stretch width-[150px]">
+              <img src={devLang} alt="Dev-Language" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
+            </div>
+          </div>
+          
+          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+              <h1 class="font-medium text-[20px] leading-[24px] ">
+                4. Launch
+              </h1>
+              <p class="text-[#3A3A3A] text-[16px] leading-[24px] ">
+                Software programs have become very useful these days. When
+                looking for software programs to use for your business, you
+                would want the best one that is within your price range.
+              </p>
+            </div>
+            <div class="flex justify-end items-end self-stretch width-[150px]">
+              <img src={mobileApp} alt="Mobile-App" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
