@@ -13,8 +13,8 @@ const ServicesDetails = () => {
 
   if (!details || !imageSrc) return <p>image not found</p>;
   return (
-    <div className="py-12 px-16 flex flex-col items-center gap-[30px]">
-      <div className="flex flex-row-reverse flex-1 border border-[#D9D9D9] h-[210px] items-center justify-between w-full rounded-lg shadow-sm">
+    <div className="py-12 px-7 md:px-16 flex flex-col items-center gap-[30px]">
+      <div className="flex flex-col-reverse md:flex-row-reverse flex-1 border border-[#D9D9D9] h-[210px] items-center justify-between w-full rounded-lg shadow-sm">
         <img
           src={imageSrc}
           alt={details.title}
