@@ -7,8 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 const ContactUsForm = () => {
   return (
     <div className="flex flex-col gap-[30px]">
-      <div className="flex max-w-[800px] w-full justify-center m-auto flex-col gap-[50px]">
-        <div className="flex gap-[37px]">
+      <div className="flex max-w-[800px] w-full justify-center m-auto flex-col gap-10 md:gap-[50px]">
+        <div className="flex gap-5 md:gap-[37px]">
           <Input
             type="text"
             placeholder="First Name"
@@ -20,7 +20,7 @@ const ContactUsForm = () => {
             className="placeholder:text-[#3A3A3A] text-[#3A3A3A] h-[55px] font-normal leading-[33px] md:text-[24px]"
           />
         </div>
-        <div className="flex gap-[37px]">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-[37px]">
           <Input
             type="email"
             placeholder="Email"
@@ -36,7 +36,7 @@ const ContactUsForm = () => {
           <h1 className="text-[#3A3A3A] text-[24px] font-normal leading-[33px]">
             Why are you contacting us?
           </h1>
-          <div className="flex items-center gap-[34px]">
+          <div className="flex flex-wrap items-center gap-[34px]">
             <label
               htmlFor=""
               className="flex items-center gap-2.5 text-[16px] leading-[22px] font-normal text-[#545454]"

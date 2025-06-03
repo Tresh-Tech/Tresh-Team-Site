@@ -10,15 +10,15 @@ import ContactUsForm from "./ContactUsForm";
 
 const ContactUs = () => {
   return (
-    <div className="py-12 px-16 flex flex-col flex-1 justify-between gap-[120px]">
-      <div className="flex flex-col items-center gap-[100px]">
-        <div className="flex flex-col items-center gap-2.5">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 justify-between gap-[50px] md:gap-[120px]">
+      <div className="relative flex flex-col items-center gap-10 md:gap-[100px] w-full">
+        <div className="flex flex-col  items-center gap-2.5">
           <h1 className=" text-[40px] leading-[130%] font-semibold">Contact</h1>
           <p className="text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
             This is what we offer
           </p>
         </div>
-        <div className="flex justify-between max-w-[calc(100%-200px)] w-full">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between md:max-w-[calc(100%-200px)] w-full">
           <div className="flex flex-col items-center gap-2.5 m-auto">
             <h1 className=" text-[24px] leading-[130%] font-medium -tracking-[5%]">
               Email
@@ -36,7 +36,7 @@ const ContactUs = () => {
             </p>
           </div>
           <div className="flex flex-col items-center gap-2.5 m-auto">
-            <h1 className=" text-[24px] leading-[130%] font-medium -tracking-[5%]">
+            <h1 className="w-full text-[24px] leading-[130%] font-medium -tracking-[5%]">
               Reach out on
             </h1>
             <div className="flex items-center gap-[30px]">

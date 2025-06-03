@@ -66,9 +66,9 @@ const AboutUs = () => {
         </div>
         <div className="flex flex-col items-center gap-[30px]">
           <div className="flex flex-wrap gap-5 items-center">
-            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+            <div className="relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={Treshmeme}
                 alt="Tresh Team Colleague pic"
               />
@@ -86,9 +86,9 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={Treshmeme}
                 alt="Tresh Team Colleague pic"
               />
@@ -106,9 +106,9 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={Treshmeme}
                 alt="Tresh Team Colleague pic"
               />
@@ -128,9 +128,9 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="flex flex-wrap gap-5 items-center">
-            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={Treshmeme}
                 alt="Tresh Team Colleague pic"
               />
@@ -148,9 +148,9 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={Treshmeme}
                 alt="Tresh Team Colleague pic"
               />
@@ -168,9 +168,9 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+            <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 src={Treshmeme}
                 alt="Tresh Team Colleague pic"
               />

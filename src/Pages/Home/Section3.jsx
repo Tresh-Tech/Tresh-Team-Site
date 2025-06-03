@@ -20,14 +20,14 @@ const Section3 = () => {
           </p>
         </div>
         <div className="flex relative flex-col items-center w-full p-0 gap-10">
-          <div className="max-w-[calc(100%-900px)] w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45">
+          <div className="hidden md:block max-w-[calc(100%-900px)] w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45">
             <div className="relative">
               <div className="borderMe w-full"></div>
               <div className="borderMe w-full rotate-90"></div>
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[15px] p-2 bg-white border-primary rounded-full"></div>
             </div>
           </div>
-          <div className="flex w-full z-50 justify-between items-center">
+          <div className="flex flex-col gap-10 md:flex-row w-full z-50 justify-between items-center">
             <div className=" max-w-[500px] w-full h-[234px] rounded-lg overflow-hidden flex items-center order-2 bg-white flex-grow-0 border border-[#555555]/30">
               <div className="flex-1 flex flex-col items-start gap-8">
                 <div>
@@ -64,7 +64,7 @@ const Section3 = () => {
               </div>
             </div>
           </div>
-          <div className="flex w-full z-50 justify-between items-center">
+          <div className="flex flex-col gap-10 md:flex-row w-full z-50 justify-between items-center">
             <div className=" max-w-[500px] w-full h-[234px] rounded-lg overflow-hidden flex items-center order-2 bg-primary flex-grow-0 border border-[#555555]/30">
               <div className="flex-1">
                 <h1 className="font-medium ml-4 text-3xl text-white">

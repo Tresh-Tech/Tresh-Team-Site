@@ -4,17 +4,18 @@ import Button from "@/components/Button/Button";
 const Section1 = () => {
   return (
     <>
-      <div className="flex py-12 px-6 items-center justify-between">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-0 pt-16 md:pt-12 md:pb-12 px-3 md:px-6 items-center justify-between">
         <div className="flex-1">
-          <h1 className="font-bold text-4xl">
+          <div className="flex flex-col md:gap-0 gap-2">
+          <h1 className="font-bold text-4xl text-center md:text-left">
             Revolutionizing Business Through Innovative Technology.
           </h1>
-          <p className="text-xl font-">
+          <p className="text-xl text-center md:text-left font-">
             From development to deployment, we turn ideas into high-performing
             solutions.
           </p>
-
-          <div className="mt-10">
+          </div>
+          <div className="mt-10 flex md:block justify-center">
             <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">Learn More</Button>
           </div>
         </div>

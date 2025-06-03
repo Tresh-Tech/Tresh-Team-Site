@@ -7,11 +7,11 @@ import Button from "@/components/Button/Button";
 const Section2 = () => {
   return (
     <>
-      <div className="px-6 py-12 relative">
-        <div className="absolute flex justify-center left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
+      <div className="px-3 md:px-6 py-12 relative">
+        <div className="absolute hidden md:flex justify-center left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
           <img width="100%" height="auto" src={ChainLink} alt="" />
         </div>
-        <div className="flex items-center gap-36 justify-between">
+        <div className="flex flex-col md:flex-row items-center gap-36 justify-between">
           <div className="max-w-[400px] w-full">
             <img
               src={TreshLogo}
@@ -36,7 +36,7 @@ const Section2 = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row-reverse items-center gap-36 justify-between">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-36 justify-between">
           <div className="max-w-[400px] w-full">
             <img
               src={Manwithphone}
@@ -61,7 +61,7 @@ const Section2 = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-36 justify-between">
+        <div className="flex flex-col md:flex-row items-center gap-36 justify-between">
           <div className="w-full max-w-[400px]">
             <img
               src={SuccessfulMarketing}

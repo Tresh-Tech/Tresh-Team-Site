@@ -11,7 +11,7 @@ const CartPg = () => {
   });
 
   return (
-    <div className="py-12 px-16 flex flex-col flex-1 gap-[30px]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px]">
       <div className="w-full">
         <button
           onClick={() => navigate(-1)}
@@ -23,7 +23,7 @@ const CartPg = () => {
         </button>
       </div>
       {cart.map((cartData, Id) => (
-        <div key={Id} className="flex gap-16 justify-between">
+        <div key={Id} className="flex flex-col md:flex-row gap-16 justify-between">
           <div className="flex max-w-[745px] w-full flex-col gap-5 items-center">
             <div className="flex justify-between items-center w-full">
               <h1 className="font-semibold text-[24px] leading-[100%] text-[#0000CD]">
@@ -34,9 +34,9 @@ const CartPg = () => {
             <img
               src={cartData.homepg}
               alt="Car Dealership"
-              className="w-full h-[396px] rounded-lg border shadow-md"
+              className="w-full md:h-[396px] rounded-lg border shadow-md"
             />
-            <div className="flex justify-between w-full p-2.5">
+            <div className="flex flex-wrap md:flex-nowrap gap-5 md:gap-0 justify-between w-full p-2.5">
               <div className="max-w-[358px] w-full flex flex-col gap-4">
                 <h1 className="text-[20px] leading-[100%]">{cartData.title}</h1>
                 <p className="font-semibold text-[24px] leading-[100%]">
@@ -61,7 +61,7 @@ const CartPg = () => {
           </div>
           <div className="border p-5 gap-2.5 flex flex-col flex-1 rounded-sm shadow-sm">
             <h1>Pricing Details</h1>
-            <div className="flex justify-between items-center w-full p-5 rounded-md border border-[#00000033] shadow-sm">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center w-full p-5 rounded-md border border-[#00000033] shadow-sm">
               <div className="flex justify-between items-center w-full">
                 <h1 className="font-semibold text-[20px] leading-[100%] text-[#0000CD]">
                   {Id + 1}. {cartData.businessType}

@@ -13,7 +13,7 @@ const Section4 = () => {
             What our client says about us
           </p>
         </div>
-        <div className="flex justify-center items-center gap-[10px]">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-[10px]">
           <div className="flex flex-col gap-[10px] max-w-[390px] w-full p-5">
             <h1 className="text-[24px] text-center font-bold leading-[33px]">
               Priya Sharma
