@@ -9,7 +9,7 @@ import Section6 from "./Section6";
 const Home = () => {
   return (
     <>
-      <div className=" px-16 flex-1">
+      {/*<div className=" px-16 flex-1">
         <Section1 />
         <Section2 />
         <Section3 />
@@ -17,7 +17,7 @@ const Home = () => {
         <Section5 />
         <Section6 />
         <Section7 />
-      </div>
+      </div>*/}
     </>
   );
 };

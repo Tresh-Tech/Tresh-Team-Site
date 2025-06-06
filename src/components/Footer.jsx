@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <>
+    <>{/*
       <div className="bg-black flex flex-col gap-[20px] py-12 px-16">
         <div className="flex justify-between items-end">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
@@ -76,7 +76,7 @@ const Footer = () => {
             <FaYoutube size={25} color="#FF4C4C" />
           </div>
         </div>
-      </div>
+      </div>*/}
     </>
   );
 };
