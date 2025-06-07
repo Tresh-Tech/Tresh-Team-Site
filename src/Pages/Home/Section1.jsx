@@ -4,22 +4,24 @@ import Button from "@/components/Button/Button";
 const Section1 = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-10 md:gap-0 pt-16 md:pt-12 md:pb-12 px-3 md:px-6 items-center justify-between">
+      <div className="block md:flex py-6 px-2 md:py-12 md:px-6 items-center justify-between">
         <div className="flex-1">
-          <div className="flex flex-col md:gap-0 gap-2">
-          <h1 className="font-bold text-4xl text-center md:text-left">
-            Revolutionizing Business Through Innovative Technology.
+          <h1 className="font-bold text-2xl md:text-4xl">
+          Revolutionizing Business Through Innovative Technology.
           </h1>
-          <p className="text-xl text-center md:text-left font-">
+          <p className="text-base md:text-xl font-">
             From development to deployment, we turn ideas into high-performing
             solutions.
           </p>
-          </div>
-          <div className="mt-10 flex md:block justify-center">
-            <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">Learn More</Button>
+
+          <div className="mt-6 md:mt-10 flex gap-5">
+            <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">Contact Us</Button>
+            <Button className="shadow-md text-[#1d4ed8] py-2.5 px-5 border border-[#1d4ed8] rounded-[30px]">Learn More</Button>
           </div>
         </div>
-        <div className="w-full max-w-[650px]">
+
+        
+        <div className="w-full max-w-[650px] max-md:mt-10">
           <img
             src={TreshMeeting}
             width="100%"

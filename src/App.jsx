@@ -11,6 +11,7 @@ import ServicesDetails from "./Pages/Services/ServicesDetails";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AllProjectsDetails from "./Pages/Projects/AllProjectsDetails";
 import CartPg from "./Pages/Cart/CartPg";
+import Error404Pg from "./Pages/Error404Pg/Error404Pg";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/projects/details/:id" element={<AllProjectsDetails />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/cart" element={<CartPg />} />
+        <Route path="/*" element={<Error404Pg />} />
       </Routes>
       <Footer />
     </div>
