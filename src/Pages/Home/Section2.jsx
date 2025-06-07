@@ -7,11 +7,14 @@ import Button from "@/components/Button/Button";
 const Section2 = () => {
   return (
     <>
-      <div className="px-3 md:px-6 py-12 relative">
+      <div className="py-6 px-2 md:py-12 md:px-6 max-md:flex flex-col gap-12 relative">
+        
+        {/* dotted line demacation */}
         <div className="absolute hidden md:flex justify-center left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
           <img width="100%" height="auto" src={ChainLink} alt="" />
         </div>
-        <div className="flex flex-col md:flex-row items-center gap-36 justify-between">
+        {/* first section */}
+        <div className="flex flex-col max-md:flex-col-reverse md:flex-row items-center gap-12 md:gap-36 justify-between">
           <div className="max-w-[400px] w-full">
             <img
               src={TreshLogo}
@@ -21,8 +24,8 @@ const Section2 = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="font-semibold text-3xl">Welcome to Tresh Tech</h1>
-            <p className="text-2xl text-text-fade">
+            <h1 className="font-semibold text-2xl md:text-3xl">Welcome to Tresh Tech</h1>
+            <p className="text-base md:text-2xl text-text-fade">
               We're a passionate collective of web developers, UI/UX designers,
               and copywriters dedicated to crafting exceptional digital
               experiences,We're a passionate collective of web developers, UI/UX
@@ -36,7 +39,8 @@ const Section2 = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row-reverse items-center gap-36 justify-between">
+        {/* second section */}
+        <div className="flex flex-col max-md:flex-col-reverse md:flex-row-reverse items-center gap-12 md:gap-36 justify-between">
           <div className="max-w-[400px] w-full">
             <img
               src={Manwithphone}
@@ -46,10 +50,10 @@ const Section2 = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="font-semibold text-3xl">
+            <h1 className="font-semibold text-2xl md:text-3xl">
               Transforming Ideas to Reality
             </h1>
-            <p className="text-2xl text-text-fade">
+            <p className="text-base md:text-2xl text-text-fade">
               We're a passionate collective of web developers, UI/UX designers,
               and copywriters dedicated to crafting exceptional digital
               experiences,We're a passionate collective of web developers, UI/UX
@@ -61,7 +65,9 @@ const Section2 = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center gap-36 justify-between">
+
+        {/* third section */}
+        <div className="flex flex-col max-md:flex-col-reverse md:flex-row items-center gap-12 md:gap-36 justify-between">
           <div className="w-full max-w-[400px]">
             <img
               src={SuccessfulMarketing}
@@ -71,10 +77,10 @@ const Section2 = () => {
             />
           </div>
           <div className="flex-1">
-            <h1 className="font-semibold text-3xl">
+            <h1 className="font-semibold text-2xl md:text-3xl">
               Your success is our priority
             </h1>
-            <p className="text-2xl text-text-fade">
+            <p className="text-base md:text-2xl text-text-fade">
               We're a passionate collective of web developers, UI/UX designers,
               and copywriters dedicated to crafting exceptional digital
               experiences,We're a passionate collective of web developers, UI/UX

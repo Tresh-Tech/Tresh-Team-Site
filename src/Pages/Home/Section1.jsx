@@ -4,7 +4,7 @@ import Button from "@/components/Button/Button";
 const Section1 = () => {
   return (
     <>
-      <div className="block md:flex py-6 px-2 md:py-12 md:px-6 items-center justify-between">
+      <div className="flex max-md:flex-col md:flex-row py-6 px-2 md:py-12 md:px-6 items-center justify-between gap-12">
         <div className="flex-1">
           <h1 className="font-bold text-2xl md:text-4xl">
           Revolutionizing Business Through Innovative Technology.
@@ -21,7 +21,7 @@ const Section1 = () => {
         </div>
 
         
-        <div className="w-full max-w-[650px] max-md:mt-10">
+        <div className="w-full max-w-[650px]">
           <img
             src={TreshMeeting}
             width="100%"

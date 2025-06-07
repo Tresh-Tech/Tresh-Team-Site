@@ -9,7 +9,7 @@ import {
 
 const Section6 = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-12 gap-[30px]">
+    <div className="flex flex-col justify-center items-center py-6 px-2 md:py-12 md:px-6 gap-[30px]">
       <div className="flex w-full flex-col items-center">
         <h1 className=" text-[40px] leading-[130%] font-bold">
           Frequently Asked Questions
