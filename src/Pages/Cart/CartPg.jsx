@@ -11,7 +11,7 @@ const CartPg = () => {
   });
 
   return (
-    <div className="py-12 px-16 flex flex-col flex-1 gap-[30px]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px]">
       <div className="w-full">
         <button
           onClick={() => navigate(-1)}

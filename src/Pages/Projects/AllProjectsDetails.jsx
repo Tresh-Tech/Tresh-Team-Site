@@ -13,7 +13,7 @@ const AllProjectsDetails = () => {
 
   if (!data) return <p>image not found</p>;
   return (
-    <div className="py-12 px-16 flex flex-col items-center gap-[30px]">
+    <div className="py-12 px-7 md:px-16 flex flex-col items-center gap-[30px]">
       <div className="w-full">
         <button
           onClick={() => navigate(-1)}
@@ -23,7 +23,7 @@ const AllProjectsDetails = () => {
           <h3 className="text-2xl leading-[130%] font-normal">Services</h3>
         </button>
       </div>
-      <div className="flex border flex-grow border-[#D9D9D9] h-[210px] py-5 items-center justify-between w-full rounded-lg shadow-sm">
+      <div className="flex border flex-col-reverse md:flex-row flex-grow border-[#D9D9D9] md:h-[210px] py-5 items-center justify-between w-full rounded-lg shadow-sm">
         <div className="flex flex-col max-w-[630px] ml-5">
           <h2 className="text-[32px] leading-[36px] font-semibold">
             {data.title}

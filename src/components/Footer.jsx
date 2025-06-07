@@ -12,46 +12,47 @@ import {
 } from "react-icons/fa6";
 const Footer = () => {
   return (
-    <>{/*
-      <div className="bg-black flex flex-col gap-[20px] py-12 px-16">
-        <div className="flex justify-between items-end">
+    <>
+      <div className="bg-black flex flex-col gap-[20px] py-12 px-7 md:px-16">
+        <div className="flex gap-8 md:gap-0 flex-col md:flex-row md:justify-between md:items-end">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
-                <img src={Logo} width={70} height={70} alt="" />
-                <h1 className="text-[34px] text-white leading-[66px] font-bold uppercase">
-                  Team Tresh
-                </h1>
+                <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
+                <h1 className="text-md md:text-xl text-white font-semibold uppercase">Team Tresh</h1>
               </div>
-              <p className="text-[20px] leading-[27px] text-white">
+              <p className="text-md md:text-[20px] leading-[27px] text-white">
                 Join a team of creatives that are ready to connect with other
                 creatives and work
               </p>
             </div>
-            <ul className="flex items-center gap-[70px] text-lg font-medium">
-              <li className="text-lg font-normal leading-[120%] text-white">
-                <Link>Services</Link>
+            <ul className="flex flex-col items-start gap-4 md:gap-[70px] text-lg font-medium">
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/">Home</Link>
               </li>
-              <li className="text-lg font-normal leading-[120%] text-white">
-                <Link>Projects</Link>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/service">Services</Link>
               </li>
-              <li className="text-lg font-normal leading-[120%] text-white">
-                <Link>About us</Link>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li className="text-lg underline font-normal leading-[120%] text-white">
+                <Link to="/about-us">About us</Link>
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="relative w-full flex items-start flex-col gap-5">
             <h1 className="text-[20px] font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
-            <div className="flex items-center w-fit">
+            <div className="flex items-center min-w-[150px] w-[250px] md:min-w-fit md:w-fit">
               <div className="flex items-center space-x-2 px-2 rounded-l-[22px] border border-r-0 h-full">
                 <CiMail color="white" size={20} />
                 <input
                   type="email"
-                  name=""
+                  name="email"
                   id="email"
-                  className="outline-none py-3 border-none bg-transparent text-[#DEE1E6]"
+                  className="outline-none w-[150px] md:w-auto py-3 border-none bg-transparent text-[#DEE1E6]"
                   placeholder="Input your email"
                 />
               </div>
@@ -64,7 +65,7 @@ const Footer = () => {
         <div className="w-full p-0.5 rounded-xl bg-white">
           <div className=" border-dashed border border-black"></div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex items-center border w-fit rounded-[4px] gap-[41px] p-2">
             <h1 className="text-white">English</h1>
             <FaAngleRight color="white" size={20} />
@@ -76,7 +77,7 @@ const Footer = () => {
             <FaYoutube size={25} color="#FF4C4C" />
           </div>
         </div>
-      </div>*/}
+      </div>
     </>
   );
 };

@@ -17,22 +17,29 @@ const AllProjects = () => {
     const newCart = [...cart, projectData];
     setCart(newCart);
   }
-
+/*
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                  }}
+*/
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart])
   
   
   return (
-    <div className="py-12 px-16 flex flex-col flex-1 gap-[30px]">
-      <div className="flex flex-col items-center gap-[30px]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px]">
+      <div className="flex flex-col items-center gap-[15px] md:gap-[30px]">
         <h1 className=" text-[40px] leading-[130%] font-semibold">Projects</h1>
         <p className="text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
           Our work speaks for itself.
         </p>
       </div>
 
-      <div className=" grid grid-cols-2 gap-10 place-items-center">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
         {ContentData.map((data, Id) => (
           <div key={Id} className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
             <div className="flex justify-between items-center">
@@ -56,17 +63,14 @@ const AllProjects = () => {
             </Link>
             <div className="flex flex-col gap-2.5 flex-auto">
               <h1 className="font-medium text-2xl w-full">{data.title}</h1>
-              <div className="flex gap-5 h-full">
+              <div className="flex flex-wrap lg:flex-nowrap gap-5 h-full">
                 <p
-                  style={{
-                    display: "-webkit-box",
-                    WebkitLineClamp: 3,
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                  }}
-                  className="font-normal leading-[24px] text-[#3A3A3A]"
+                  
+                  className="font-normal min-w-[150px] leading-[24px] text-[#3A3A3A]"
                 >
-                  {data.description}
+                  <div className="line-clamp-3">
+                    {data.description}
+                  </div>
                 </p>
                 <div>
                   {data.forSale ? (
