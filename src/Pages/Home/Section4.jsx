@@ -4,7 +4,7 @@ import React from "react";
 const Section4 = () => {
   return (
     <>
-      <div className="py-12 flex flex-col gap-[30px]">
+      <div className="py-6 px-2 md:py-12 md:px-6 flex flex-col gap-[30px]">
         <div className="flex flex-col items-center gap-6">
           <h1 className=" text-[40px] leading-[130%] font-semibold">
             Testimonial
