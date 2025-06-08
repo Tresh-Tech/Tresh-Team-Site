@@ -6,10 +6,10 @@ const Section7 = () => {
     <>
       <div className="py-6 px-2 md:py-12 md:px-6 flex flex-col gap-[30px]">
         <div className="flex flex-col items-center gap-2.5">
-          <h1 className=" text-[40px] leading-[130%] font-semibold">
+          <h1 className=" text-[30px] text-center md:text-[40px] leading-[130%] font-semibold">
             Be part of the next big thing
           </h1>
-          <p className="text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
+          <p className="text-base md:text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
             We are a team of tech enthusiasts passionate about creating custom
             solutions to help businesses thrive in the digital age.
           </p>
