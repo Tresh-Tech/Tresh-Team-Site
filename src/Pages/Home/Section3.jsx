@@ -8,7 +8,7 @@ import Button from "@/components/Button/Button";
 const Section3 = () => {
   return (
     <>
-      <div className="py-6 px-2 md:py-12 md:px-6 flex flex-col gap-12 md:gap-[30px]">
+      <div className="py-6 px-2 md:py-12 md:px-6 flex flex-col gap-6 md:gap-[30px]">
         {/* Section Heading */}
         <div className="flex flex-col items-center gap-2.5">
           <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">

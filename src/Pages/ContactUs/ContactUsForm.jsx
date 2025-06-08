@@ -6,9 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 
 const ContactUsForm = () => {
   return (
-    <div className="flex flex-col gap-[30px]">
-      <div className="flex max-w-[800px] w-full justify-center m-auto flex-col gap-10 md:gap-[50px]">
-        <div className="flex gap-5 md:gap-[37px]">
+    <div className="flex flex-col">
+      <div className="flex max-w-[800px] w-full justify-center m-auto flex-col gap-5 md:gap-[50px]">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-[37px]">
           <Input
             type="text"
             placeholder="First Name"
@@ -33,7 +33,7 @@ const ContactUsForm = () => {
           />
         </div>
         <div className="flex flex-col gap-[30px] py-3 min-h-[220px] h-full px-5 border border-[#D9D9D9]">
-          <h1 className="text-[#3A3A3A] text-[24px] font-normal leading-[33px]">
+          <h1 className="text-[#3A3A3A] text-base md:text-[24px] font-normal leading-[33px]">
             Why are you contacting us?
           </h1>
           <div className="flex flex-wrap items-center gap-[34px]">
@@ -71,8 +71,10 @@ const ContactUsForm = () => {
           placeholder="Description"
           className="placeholder:text-[#3A3A3A] text-[#3A3A3A] min-h-[220px] font-normal leading-[33px] md:text-[24px]"
         />
+        <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+          Send
+        </Button>
       </div>
-      <Button variant="contactForm">Send</Button>
     </div>
   );
 };

@@ -8,10 +8,10 @@ import mobileApp from "../../assets/Images/Successful mobile app startup launch.
 import { FaArrowDown, FaArrowDown19, FaArrowRight } from "react-icons/fa6";
 const AboutUs = () => {
   return (
-    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[40px]">
-      <div className="flex flex-col items-center justify-center gap-[40px]">
-        <h1 className=" text-[40px] leading-[130%] font-semibold">About us</h1>
-        <p className="text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] md:gap-[40px]">
+      <div className="flex flex-col items-center justify-center gap-6 md:gap-[40px]">
+        <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">About us</h1>
+        <p className="text-base md:text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
           We're a passionate collective of web developers, UI/UX designers, and
           copywriters dedicated to crafting exceptional digital
           experiences,We're a passionate collective of web developers, UI/UX
@@ -26,6 +26,7 @@ const AboutUs = () => {
           Contact Us
         </Button>
       </div>
+
       <div className="flex flex-wrap justify-center items-center gap-[20px]">
         <div className="flex flex-col gap-[10px] max-w-[398px] w-full p-5">
           <h1 className="text-[24px] text-center font-medium leading-[130%]">
@@ -55,12 +56,13 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+
       <div className="flex flex-col items-center justify-center gap-[30px]">
         <div className="flex flex-col items-center gap-2.5">
-          <h1 className=" text-[40px] text-center leading-[130%] font-bold">
+          <h1 className="text-[30px] md:text-[40px] text-center leading-[130%] font-bold">
             Team Tresh
           </h1>
-          <p className="text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
+          <p className="text-base md:text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
             Meet the team leads of experts.
           </p>
         </div>
@@ -201,8 +203,8 @@ const AboutUs = () => {
       <div class="flex flex-col gap-[30px]">
         <div class="flex flex-wrap gap-[50px] justify-between items-center">
           
-          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
-            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+          <div class="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 class="font-medium text-[20px] leading-[24px] ">
                 1. Client Meeting
               </h1>
@@ -213,23 +215,23 @@ const AboutUs = () => {
               </p>
             </div>
             <div class="flex justify-end items-end self-stretch width-[150px]">
-              <img src={teamMeet} alt="Team-Meeting" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
+              <img src={teamMeet} alt="Team-Meeting" class="w-full" />
             </div>
           </div>
           
-          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
-            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+          <div class="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 class="font-medium text-[20px] leading-[24px] ">
                 2. Quotation
               </h1>
-              <p class="relative text-[#3A3A3A] text-[16px] leading-[24px] ">
+              <p class="text-[#3A3A3A] text-[16px] leading-[24px] ">
                 Software programs have become very useful these days. When
                 looking for software programs to use for your business, you
                 would want the best one that is within your price range.
               </p>
             </div>
             <div class="flex justify-end items-end self-stretch width-[150px]">
-              <img src={quote} alt="Quote" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
+              <img src={quote} alt="Quote" class="w-full" />
             </div>
           </div>
           
@@ -241,8 +243,8 @@ const AboutUs = () => {
       <div class="flex flex-col gap-[30px]">
         <div class="flex flex-wrap gap-[50px] justify-between items-center">
           
-          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
-            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+          <div class="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 class="font-medium text-[20px] leading-[24px] ">
                 3. Software Development
               </h1>
@@ -253,12 +255,12 @@ const AboutUs = () => {
               </p>
             </div>
             <div class="flex justify-end items-end self-stretch width-[150px]">
-              <img src={devLang} alt="Dev-Language" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
+              <img src={devLang} alt="Dev-Language" class="w-full" />
             </div>
           </div>
           
-          <div class="relative max-w-[580px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
-            <div class="flex flex-col gap-2 max-w-[400px] w-full py-2.5 px-5">
+          <div class="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+            <div class="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 class="font-medium text-[20px] leading-[24px] ">
                 4. Launch
               </h1>
@@ -269,7 +271,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div class="flex justify-end items-end self-stretch width-[150px]">
-              <img src={mobileApp} alt="Mobile-App" class="md:max-w-[150px] sm:max-w-[100px] max-w-[75px] min-w-[50px]" />
+              <img src={mobileApp} alt="Mobile-App" class="w-full" />
             </div>
           </div>
           

@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <div className="bg-black flex flex-col gap-[20px] py-12 px-7 md:px-16">
-        <div className="flex gap-8 md:gap-0 flex-col md:flex-row md:justify-between md:items-end">
+        <div className="block md:flex relative">
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
@@ -41,8 +41,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="relative w-full flex items-start flex-col gap-5">
-            <h1 className="text-[20px] font-semibold leading-[30px] text-white">
+          <div className=" md:absolute right-0 bottom-0 max-md:mt-12 flex flex-col gap-5">
+            <h1 className="text-[20px] text-center font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
             <div className="flex items-center min-w-[150px] w-[250px] md:min-w-fit md:w-fit">
@@ -70,7 +70,7 @@ const Footer = () => {
             <h1 className="text-white">English</h1>
             <FaAngleRight color="white" size={20} />
           </div>
-          <div className="flex items-center gap-[41px]">
+          <div className="flex items-center justify-center gap-[41px]">
             <FaTwitter size={25} color="#4CD2FF" />
             <FaFacebook size={25} color="#4C8AFF" />
             <FaLinkedin size={25} color="#5378D0" />
