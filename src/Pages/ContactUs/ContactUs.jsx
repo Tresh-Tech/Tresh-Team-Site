@@ -10,16 +10,16 @@ import ContactUsForm from "./ContactUsForm";
 
 const ContactUs = () => {
   return (
-    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 justify-between gap-[50px] md:gap-[120px]">
-      <div className="relative flex flex-col items-center gap-10 md:gap-[100px] w-full">
-        <div className="flex flex-col  items-center gap-2.5">
-          <h1 className=" text-[40px] leading-[130%] font-semibold">Contact</h1>
-          <p className="text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] md:gap-[40px]">
+      <div className="flex flex-col items-center gap-10 md:gap-[100px] w-full">
+        <div className="flex flex-col items-center gap-1.5 md:gap-2.5">
+          <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">Contact</h1>
+          <p className="text-base md:text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
             This is what we offer
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between md:max-w-[calc(100%-200px)] w-full">
-          <div className="flex flex-col items-center gap-2.5 m-auto">
+        <div className="flex flex-col md:flex-row gap-3 justify-between md:max-w-[calc(100%-200px)] w-full">
+          <div className="flex flex-col items-center gap-1.5 md:gap-2.5 m-auto">
             <h1 className=" text-[24px] leading-[130%] font-medium -tracking-[5%]">
               Email
             </h1>
@@ -27,7 +27,7 @@ const ContactUs = () => {
               Tresh@team.com
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2.5 m-auto">
+          <div className="flex flex-col items-center  gap-1.5 md:gap-2.5 m-auto">
             <h1 className=" text-[24px] leading-[130%] font-medium -tracking-[5%]">
               Call
             </h1>
@@ -35,23 +35,23 @@ const ContactUs = () => {
               01234567891
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2.5 m-auto">
+          <div className="flex flex-col items-center  gap-1.5 md:gap-2.5 m-auto">
             <h1 className="w-full text-[24px] leading-[130%] font-medium -tracking-[5%]">
               Reach out on
             </h1>
             <div className="flex items-center gap-[30px]">
-              <FaLinkedin size={18} color="#5378D0" />
-              <FaFacebook size={18} color="#4C8AFF" />
-              <FaTwitter size={18} color="#4CD2FF" />
+              <FaLinkedin className="md:text-[18px] cursor-pointer text-[24px]" color="#5378D0" />
+              <FaFacebook className="md:text-[18px] cursor-pointer text-[24px]" color="#4C8AFF" />
+              <FaTwitter  className="md:text-[18px] cursor-pointer text-[24px]"color="#4CD2FF" />
             </div>
           </div>
-          <div className="flex flex-col items-center gap-2.5 m-auto">
+          <div className="flex flex-col items-center  gap-1.5 md:gap-2.5 m-auto">
             <h1 className=" text-[24px] leading-[130%] font-medium -tracking-[5%]">
               Location
             </h1>
             <div className="flex items-center gap-[10px]">
-              <FaLocationDot size={18} />
-              <h1>The world</h1>
+              <FaLocationDot size={18} color="#4D4D4D"/>
+              <p className="text-[16px] text-center leading-[26px] font-normal text-[#4D4D4D]">The world</p>
             </div>
           </div>
         </div>

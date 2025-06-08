@@ -33,8 +33,8 @@ const AllProjects = () => {
   return (
     <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px]">
       <div className="flex flex-col items-center gap-[15px] md:gap-[30px]">
-        <h1 className=" text-[40px] leading-[130%] font-semibold">Projects</h1>
-        <p className="text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
+        <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">Projects</h1>
+        <p className="text-base  md:text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
           Our work speaks for itself.
         </p>
       </div>
