@@ -9,14 +9,20 @@ import Section7 from "./Section7";
 const Home = () => {
   return (
     <>
-      <div className=" px-4 md:px-16 flex-1">
+      <div className=" px-4 py-6 md:px-16 flex-1">
         <Section1 />
+        <hr />
         <Section2 />
+        <hr />
         <Section3 />
-        {/* <Section4 /> */}
-        {/* <Section5 /> */}
-        {/* <Section6 /> */}
-        {/* <Section7 /> */}
+        <hr />
+        <Section4 />
+        <hr />
+        <Section5 />
+        <hr />
+        <Section6 />
+        <hr />
+        <Section7 />
       </div>
     </>
   );

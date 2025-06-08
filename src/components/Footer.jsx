@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="flex flex-col gap-[43px] max-w-[600px] w-full">
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
-                <img src={Logo} className="w-[40px] md:h-[50px] h-[40px] md:h-[50px]" alt="" />
+                <img src={Logo} className="w-[40px] h-[40px]" alt="" />
                 <h1 className="text-md md:text-xl text-white font-semibold uppercase">Team Tresh</h1>
               </div>
               <p className="text-md md:text-[20px] leading-[27px] text-white">
@@ -26,7 +26,7 @@ const Footer = () => {
                 creatives and work
               </p>
             </div>
-            <ul className="flex flex-col items-start gap-4 md:gap-[70px] text-lg font-medium">
+            <ul className="flex flex-col md:flex-row items-start gap-4 md:gap-[70px] text-lg font-medium">
               <li className="text-lg underline font-normal leading-[120%] text-white">
                 <Link to="/">Home</Link>
               </li>

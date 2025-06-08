@@ -7,15 +7,16 @@ const Section5 = () => {
   return (
     <div className="py-6 px-2 md:py-12 md:px-6 flex flex-col gap-[30px]">
       <div className="flex flex-col items-center gap-2.5">
-        <h1 className=" text-[40px] leading-[130%] font-semibold">
+        <h1 className=" text-[30px] md:text-[40px] leading-[130%] font-semibold">
           Team Tresh
         </h1>
-        <p className="text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
+        <p className="text-base md:text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
           Meet the team leads of experts.
         </p>
       </div>
+      
       <div className="flex gap-5 flex-row overflow-x-auto scroller scroll-smooth">
-        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]">
           <img
             className="w-full h-full object-cover"
             src={Treshmeme}
@@ -35,7 +36,7 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]">
           <img
             className="w-full h-full object-cover"
             src={Treshmeme}
@@ -55,7 +56,7 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]">
           <img
             className="w-full h-full object-cover"
             src={Treshmeme}
@@ -75,7 +76,7 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]">
           <img
             className="w-full h-full object-cover"
             src={Treshmeme}
@@ -95,7 +96,7 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[480px]">
+        <div className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]">
           <img
             className="w-full h-full object-cover"
             src={Treshmeme}
