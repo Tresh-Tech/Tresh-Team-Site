@@ -24,7 +24,7 @@ const ContactUs = () => {
               Email
             </h1>
             <p className="text-[16px] text-center leading-[26px] font-normal text-[#4D4D4D]">
-              Tresh@team.com
+              treshtechcohort@gmail.com
             </p>
           </div>
           <div className="flex flex-col items-center  gap-1.5 md:gap-2.5 m-auto">
@@ -32,7 +32,7 @@ const ContactUs = () => {
               Call
             </h1>
             <p className="text-[16px] text-center leading-[26px] font-normal text-[#4D4D4D]">
-              01234567891
+              +2349138289542, +2348158180372
             </p>
           </div>
           <div className="flex flex-col items-center  gap-1.5 md:gap-2.5 m-auto">
@@ -51,7 +51,7 @@ const ContactUs = () => {
             </h1>
             <div className="flex items-center gap-[10px]">
               <FaLocationDot size={18} color="#4D4D4D"/>
-              <p className="text-[16px] text-center leading-[26px] font-normal text-[#4D4D4D]">The world</p>
+              <p className="text-[16px] text-center leading-[26px] font-normal text-[#4D4D4D]">Remote</p>
             </div>
           </div>
         </div>
