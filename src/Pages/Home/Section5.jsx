@@ -22,9 +22,10 @@ const Section5 = () => {
             className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]"
           >
             <img
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
               src={member.image}
               alt={`${member.name} - ${member.position}`}
+              loading="lazy"
             />
             <div className="absolute px-6 bottom-5 bg-transparent flex items-center justify-between w-full">
               <div>
