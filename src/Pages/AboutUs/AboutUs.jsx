@@ -106,7 +106,7 @@ const AboutUs = () => {
       </div>
 
       <div className="flex flex-col gap-[30px]">
-        <div className="flex flex-wrap gap-[50px] justify-between items-center">
+        <div className="flex flex-wrap gap-[50px] justify-around items-center">
 
           <div className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
