@@ -2,7 +2,7 @@ import Tomiwa from "../../assets/Images/tomiwa.jpg";
 import Martins from "../../assets/Images/martins.jpg";
 import Okay from "../../assets/Images/okay.jpg";
 import JoeCode from "../../assets/Images/joecode.jpg";
-import JoshDraws from "../../assets/Images/joshdraws.jg";
+import JoshDraws from "../../assets/Images/joshdraws.jpg";
 import Alrak from "../../assets/Images/alrak.jpg";
 
 export const teamData = [
