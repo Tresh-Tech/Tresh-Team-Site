@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import eComm from "../../assets/Images/Ecommerce.svg";
-import Desktop22 from "../../assets/Images/Desktop22.png";
-import Car from "../../assets/Images/Car.jpg";
-import Frame161 from "../../assets/Images/Frame161.png";
 import Button from "@/components/Button/Button";
 import { ContentData } from "./ContentData";
 const AllProjects = () => {
+  const [imgLoaded, setImgLoaded] = useState(false);
+
   const navigate = useNavigate();
   const [cart, setCart] = useState(() => {
-    const stored = localStorage.getItem('cart');
-    return stored ? JSON.parse(stored) : []
-  })
+    const stored = localStorage.getItem("cart");
+    return stored ? JSON.parse(stored) : [];
+  });
 
   const pushToCart = (projectData) => {
     const newCart = [...cart, projectData];
     setCart(newCart);
-  }
-/*
+  };
+  /*
                   style={{
                     display: "-webkit-box",
                     WebkitLineClamp: 3,
@@ -26,22 +24,27 @@ const AllProjects = () => {
                   }}
 */
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart])
-  
-  
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
   return (
-    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px]">
-      <div className="flex flex-col items-center gap-[15px] md:gap-[30px]">
-        <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">Projects</h1>
-        <p className="text-base  md:text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] max-sm:gap-[10px]">
+      <div
+        className="flex flex-col items-center gap-[10px] max-sm:gap-0
+      "
+      >
+        <h1 className="text-[30px] font-semibold">Projects</h1>
+        <p className="text-base  md:text-[24px] text-center font-medium text-[#3A3A3A]">
           Our work speaks for itself.
         </p>
       </div>
 
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
         {ContentData.map((data, Id) => (
-          <div key={Id} className="max-w-[575px] w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
+          <div
+            key={Id}
+            className="max-w-[575px] w-full border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]"
+          >
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 {data.businessType}
@@ -55,29 +58,33 @@ const AllProjects = () => {
               )}
             </div>
             <Link to={`/projects/details/${Id}`}>
-              <img
-                src={data.homepg}
-                alt="Ecommerce site"
-                className="w-full max-h-[275px] h-auto"
-              />
+              <div className="w-full max-w-[650px] h-[clamp(150px,50vw,280px)] relative flex items-center justify-center">
+                {!imgLoaded && (
+                  <div className="absolute inset-0 w-full h-full bg-black/30 backdrop-blur-lg border border-white/20 shadow-lg animate-pulse rounded-[10px] flex items-center justify-center z-0" />
+                )}
+                <img
+                  src={data.homepg}
+                  alt="Ecommerce site"
+                  className={`w-full h-auto z-10 ${
+                    imgLoaded ? "" : "invisible"
+                  }`}
+                  onLoad={() => setImgLoaded(true)}
+                />
+              </div>
             </Link>
             <div className="flex flex-col gap-2.5 flex-auto">
               <h1 className="font-medium text-2xl w-full">{data.title}</h1>
               <div className="flex flex-wrap lg:flex-nowrap gap-5 h-full">
-                <p
-                  
-                  className="font-normal min-w-[150px] leading-[24px] text-[#3A3A3A]"
-                >
-                  <div className="line-clamp-3">
-                    {data.description}
-                  </div>
+                <p className="font-normal min-w-[150px] leading-[24px] text-[#3A3A3A]">
+                  <div className="line-clamp-3">{data.description}</div>
                 </p>
                 <div>
                   {data.forSale ? (
                     <div className="flex gap-5">
                       <Button
                         onClick={() => pushToCart(data)}
-                        className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                        className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]"
+                      >
                         Cart
                       </Button>
                       <Button className="shadow-md bg-white text-[#1d4ed8] border border-[#1d4ed8] py-2.5 px-5 rounded-[30px]">
@@ -86,7 +93,10 @@ const AllProjects = () => {
                     </div>
                   ) : (
                     <div className="flex items-end">
-                      <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
+                      <Button
+                        className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]"
+                        onClick={() => navigate(`/projects/details/${Id}`)}
+                      >
                         View
                       </Button>
                     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 import { useLocation, useParams, useNavigate } from "react-router";
 import { FaAngleLeft } from "react-icons/fa6";
 import { ContentData } from "./ContentData";
@@ -20,15 +20,15 @@ const AllProjectsDetails = () => {
           className="py-2 flex items-center gap-2.5"
         >
           <FaAngleLeft size={20} />
-          <h3 className="text-2xl leading-[130%] font-normal">Services</h3>
+          <h3 className="text-2xl leading-[130%] font-normal">Project</h3>
         </button>
       </div>
-      <div className="flex border flex-col-reverse md:flex-row flex-grow border-[#D9D9D9] md:h-[210px] py-5 items-center justify-between w-full rounded-lg shadow-sm">
-        <div className="flex flex-col max-w-[630px] ml-5">
+      <div className="flex border flex-col-reverse md:flex-row flex-grow border-[#D9D9D9] md:h-[210px] py-5 items-center justify-between w-full rounded-lg shadow-sm pl-5">
+        <div className="flex flex-col max-w-[630px]">
           <h2 className="text-[32px] leading-[36px] font-semibold">
             {data.title}
           </h2>
-          <p className="text-[#4D4D4D] mt-2 text-xl leading-[36px] font-normal">
+          <p className="text-[#4D4D4D] mt-5 font-normal">
             {/* {details.description.split("\n").map((paragraph, index) => (
           <p key={index} className="mt-4">
             {paragraph}
@@ -53,21 +53,21 @@ const AllProjectsDetails = () => {
           <img
             src={data.homepg}
             alt="Car Dealership"
-            className="w-full h-[650px]"
+            className="w-full  h-[650px] max-sm:h-auto"
           />
           <div className="flex gap-[30px] w-full justify-center">
             <Button
               className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]"
-            //   onClick={() => navigate("/contact-us")}
+              //   onClick={() => navigate("/contact-us")}
             >
               Visit Website
             </Button>
-            <Button
+            {/* <Button
               className="shadow-md bg-white text-[#1d4ed8] border border-[#1d4ed8] py-2.5 px-5 rounded-[30px]"
-            //   onClick={() => navigate("/contact-us")}
+              //   onClick={() => navigate("/contact-us")}
             >
               View Pages
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

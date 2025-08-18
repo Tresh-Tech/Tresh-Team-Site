@@ -1,26 +1,58 @@
-.borderMe{
-    height:1px;
-    background-image: repeating-linear-gradient(90deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px), repeating-linear-gradient(180deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px), repeating-linear-gradient(90deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px), repeating-linear-gradient(180deg, #4d4d4d66, #4d4d4d66 10px, transparent 10px, transparent 30px);
+.borderMe {
+  height: 1px;
+  background-image: repeating-linear-gradient(
+      90deg,
+      #4d4d4d66,
+      #4d4d4d66 10px,
+      transparent 10px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #4d4d4d66,
+      #4d4d4d66 10px,
+      transparent 10px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #4d4d4d66,
+      #4d4d4d66 10px,
+      transparent 10px,
+      transparent 30px
+    ),
+    repeating-linear-gradient(
+      180deg,
+      #4d4d4d66,
+      #4d4d4d66 10px,
+      transparent 10px,
+      transparent 30px
+    );
   background-position: left top, right top, left bottom, left top;
   background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
   background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
 }
 
-.scroller::-webkit-scrollbar{
+.scroller::-webkit-scrollbar {
   background-color: transparent;
 }
 
-.mama{
+.mama {
   background-color: #1d4ed8;
-  background: linear-gradient(90deg,
-  rgba(29, 78, 216, 0.1) 0%, 
-  rgb(29, 78, 216) 50%, 
-   rgba(29, 78, 216, 0.1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(29, 78, 216, 0.1) 0%,
+    rgb(29, 78, 216) 50%,
+    rgba(29, 78, 216, 0.1) 100%
+  );
 }
-
-
-
-
-
-
-
+.card {
+  clip-path: path(
+    "M10 20 L60 20 A10,10 0,0,0 70 10 A10,10 0,0,1 80 0 L140 0 A10,10 0,0,1 150 10 L150 190 A10,10 0,0,1 140 200 L10 200 A10,10 0,0,1 0 190 L0 30 A10,10 0,0,1 10 20 Z"
+  );
+}
+.card img {
+  text-align: center;
+  width: 100%;
+  object-fit: cover;
+}

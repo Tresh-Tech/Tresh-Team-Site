@@ -1,10 +1,9 @@
-import React from "react";
+import "react";
 import { Link } from "react-router";
 import Logo from "../assets/Footer Logo.svg";
 import { CiMail } from "react-icons/ci";
 import {
   FaAngleRight,
-  FaArrowRight,
   FaFacebook,
   FaLinkedin,
   FaTwitter,
@@ -19,7 +18,9 @@ const Footer = () => {
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
                 <img src={Logo} className="w-[40px] h-[40px]" alt="" />
-                <h1 className="text-md md:text-xl text-white font-semibold uppercase">Team Tresh</h1>
+                <h1 className="text-md md:text-xl text-white font-semibold uppercase">
+                  Team Tresh
+                </h1>
               </div>
               <p className="text-md md:text-[20px] leading-[27px] text-white">
                 Join a team of creatives that are ready to connect with other
@@ -31,7 +32,7 @@ const Footer = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="text-lg underline font-normal leading-[120%] text-white">
-                <Link to="/service">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
               <li className="text-lg underline font-normal leading-[120%] text-white">
                 <Link to="/projects">Projects</Link>

@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 import Error404 from "../../assets/Images/Error404.svg";
 import Button from "@/components/Button/Button";
 import { useNavigate } from "react-router";

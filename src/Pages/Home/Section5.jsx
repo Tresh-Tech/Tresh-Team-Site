@@ -1,4 +1,4 @@
-import React from "react";
+import "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Button from "@/components/Button/Button";
 import { teamData } from "./TeamData";
@@ -17,7 +17,7 @@ const Section5 = () => {
 
       <div className="flex gap-5 flex-row overflow-x-auto scroller scroll-smooth">
         {teamData.map((member, index) => (
-          <div 
+          <div
             key={index}
             className=" relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[280px] md:max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[380px] md:h-[480px]"
           >
@@ -43,7 +43,7 @@ const Section5 = () => {
           </div>
         ))}
       </div>
-      
+
       <div className="flex items-center justify-center">
         <Button className="shadow-md border border-[##4D4D4D1A] bg-[#1d4ed8] text-white py-2.5 font-normal px-5 rounded-[30px]">
           See More
