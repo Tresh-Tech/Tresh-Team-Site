@@ -16,7 +16,7 @@ const Section3 = () => {
           <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">
             Services
           </h1>
-          <p className="text-base md:text-[24px] text-center leading-[33px] font-medium text-[#3A3A3A]">
+          <p className="text-base md:text-[24px] text-center leading-[15px] font-medium text-[#3A3A3A]">
             At <strong>Tresh</strong> we provide a wide range of technology
             services tailored to meet the unique needs of businesses of all
             sizes.
