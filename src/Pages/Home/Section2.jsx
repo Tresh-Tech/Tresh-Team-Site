@@ -21,7 +21,7 @@ const Section2 = () => {
               alt="Tresh Team Having A Meeting"
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 flex flex-column gap-3">
             <h1 className="font-semibold text-2xl md:text-3xl">
               Welcome to Tresh Tech
             </h1>
@@ -44,7 +44,7 @@ const Section2 = () => {
               alt="Tresh Team Having A Meeting"
             />
           </div>
-          <div className="flex flex-col w-[clamp(300px,100%,750px)] mb-5 max-sm:mb-0">
+          <div className="flex flex-col w-[clamp(300px,100%,750px)] mb-5 max-sm:mb-0 flex flex-column gap-3">
             <h1 className="font-semibold text-2xl md:text-3xl">
               Transforming Ideas to Reality
             </h1>
@@ -66,7 +66,7 @@ const Section2 = () => {
               alt="Tresh Team Having A Meeting"
             />
           </div>
-          <div className="flex-1 mb-10 max-sm:mb-0">
+          <div className="flex-1 mb-10 max-sm:mb-0 flex flex-column gap-3">
             <h1 className="font-semibold text-2xl md:text-3xl">
               Your success is our priority
             </h1>
