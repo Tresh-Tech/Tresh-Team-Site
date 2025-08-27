@@ -46,8 +46,8 @@ const Services = () => {
               <div className="flex-1 pl-3">
                 <h1 className="font-medium  text-2xl text-white">Front-End</h1>
                 <p className="font-[300] text-lg text-white">Development</p>
-                <p className="flex gap-1 mt-6 w-full text-[13px]">
-                  <FaAngleRight className="bg-black text-white p-[5px] rounded-full w-[20px] h-[20px] " />
+                <p className="flex gap-1 mt-6 w-full text-[13px] text-white">
+                  <FaAngleRight className="bg-white text-black p-[5px] rounded-full w-[20px] h-[20px] " />
                   Learn More
                 </p>
               </div>
@@ -89,8 +89,8 @@ const Services = () => {
                   Mobile App
                 </h1>
                 <p className="font-[300] text-lg text-white">Development</p>
-                <p className="flex gap-1 mt-6 w-full text-[13px]">
-                  <FaAngleRight className="bg-black text-white p-[5px] rounded-full w-[20px] h-[20px] " />
+                <p className="flex gap-1 mt-6 w-full text-[13px] text-white">
+                  <FaAngleRight className="bg-white text-black p-[5px] rounded-full w-[20px] h-[20px] " />
                   Learn More
                 </p>
               </div>
@@ -132,8 +132,8 @@ const Services = () => {
                   <h1 className="font-medium text-2xl text-white">AI</h1>
                   <p className="font-[300] text-lg text-white">Automation</p>
                 </div>
-                <p className="flex gap-1 mt-6 w-full text-[13px]">
-                  <FaAngleRight className="bg-black text-white p-[5px] rounded-full w-[20px] h-[20px] " />
+                <p className="flex gap-1 mt-6 w-full text-[13px] text-white">
+                  <FaAngleRight className="bg-white text-black p-[5px] rounded-full w-[20px] h-[20px] " />
                   Learn More
                 </p>
               </div>
