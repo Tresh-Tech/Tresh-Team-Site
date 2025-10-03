@@ -42,7 +42,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className=" md:absolute right-0 bottom-0 max-md:mt-12 flex flex-col gap-5">
+          /
+          
+          {/* <div className=" md:absolute right-0 bottom-0 max-md:mt-12 flex flex-col gap-5">
             <h1 className="text-[20px] text-center font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
             </h1>
@@ -61,7 +63,7 @@ const Footer = () => {
                 Subscribe
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="w-full p-0.5 rounded-xl bg-white">
           <div className=" border-dashed border border-black"></div>

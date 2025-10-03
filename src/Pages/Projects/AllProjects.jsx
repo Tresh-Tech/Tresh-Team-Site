@@ -1,11 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "@/components/Button/Button";
 import { ContentData } from "./ContentData";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
 const AllProjects = () => {
   const [imgLoaded, setImgLoaded] = useState(false);
-
   const navigate = useNavigate();
+
+  // Create refs for animated elements
+  const headingRef = useRef(null);
+  const subheadingRef = useRef(null);
+  const projectRefs = useRef([]);
+
   const [cart, setCart] = useState(() => {
     const stored = localStorage.getItem("cart");
     return stored ? JSON.parse(stored) : [];
@@ -15,34 +26,91 @@ const AllProjects = () => {
     const newCart = [...cart, projectData];
     setCart(newCart);
   };
-  /*
-                  style={{
-                    display: "-webkit-box",
-                    WebkitLineClamp: 3,
-                    WebkitBoxOrient: "vertical",
-                    overflow: "hidden",
-                  }}
-*/
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  useEffect(() => {
+    // ANIMATION 1: Heading - Slide from LEFT
+    gsap.fromTo(
+      headingRef.current,
+      {
+        opacity: 0,
+        x: -100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+      }
+    );
+
+    // ANIMATION 2: Subheading - Slide from RIGHT
+    gsap.fromTo(
+      subheadingRef.current,
+      {
+        opacity: 0,
+        x: 100,
+      },
+      {
+        opacity: 1,
+        x: 0,
+      }
+    );
+
+    // ANIMATION 3: Project Cards - Alternating LEFT and RIGHT
+    projectRefs.current.forEach((ref, index) => {
+      if (ref) {
+        // Alternate between left and right based on index
+        const isEven = index % 2 === 0;
+
+        gsap.fromTo(
+          ref,
+          {
+            opacity: 0,
+            x: isEven ? -100 : 100, // Even indices from LEFT, odd from RIGHT
+            scale: 0.9,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            scrollTrigger: {
+              trigger: ref,
+              start: "top 80%",
+              end: "bottom 50%",
+              // scrub: 1,
+            },
+          }
+        );
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, [ContentData.length]);
+
   return (
     <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] max-sm:gap-[10px]">
-      <div
-        className="flex flex-col items-center gap-[10px] max-sm:gap-0
-      "
-      >
-        <h1 className="text-[30px] font-semibold">Projects</h1>
-        <p className="text-base  md:text-[24px] text-center font-medium text-[#3A3A3A]">
+      <div className="flex flex-col items-center">
+        <h1 ref={headingRef} className="text-[30px] font-semibold">
+          Projects
+        </h1>
+        <p
+          ref={subheadingRef}
+          className="text-base md:text-[24px] text-center font-medium text-[#3A3A3A]"
+        >
           Our work speaks for itself.
         </p>
       </div>
 
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 place-items-center">
         {ContentData.map((data, Id) => (
           <div
             key={Id}
+            ref={(el) => (projectRefs.current[Id] = el)}
             className="max-w-[575px] w-full border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]"
           >
             <div className="flex justify-between items-center">
@@ -107,216 +175,6 @@ const AllProjects = () => {
           </div>
         ))}
       </div>
-
-      {/* <div className="flex flex-col items-center gap-[40px]">
-        <div className="flex justify-between items-center w-full">
-          <Link  to="/projects/details/1" state={{ id: 1, src: eComm }}>
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-              E-commerce
-            </h1>
-            <img src={eComm} alt="Ecommerce site" className="w-full h-auto" />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">
-                  Dashboard Management
-                </h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-          </Link>
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <div className="flex items-center justify-between">
-              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-                Tourism
-              </h1>
-              <small className="leading-[19px] text-center py-1.5 text-white bg-[#11CD00] border border-white rounded-md px-2.5 shadow-sm">
-                For sale
-              </small>
-            </div>
-            <img
-              src={Desktop22}
-              alt="Ecommerce site"
-              className="w-full h-auto"
-            />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">
-                  Dashboard Management
-                </h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end gap-[30px]">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-                <Button
-                  //   variant="plain"
-                  className="border border-[#0000CD] shadow-md bg-transparent py-2.5 px-5 rounded-[30px]"
-                >
-                  Buy
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-              Management
-            </h1>
-            <img src={eComm} alt="Ecommerce site" className="w-full h-auto" />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">Logo</h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <div className="flex items-center justify-between">
-              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-                Dealership
-              </h1>
-            </div>
-            <img src={Car} alt="Ecommerce site" className="w-full h-auto" />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">Cars</h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end gap-[30px]">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-              Website Vendor (Web And Mobile app)
-            </h1>
-            <img
-              src={Frame161}
-              alt="Ecommerce site"
-              className="w-full h-auto"
-            />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">Wei</h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <div className="flex items-center justify-between">
-              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-                Dealership
-              </h1>
-            </div>
-            <img src={Car} alt="Ecommerce site" className="w-full h-auto" />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">
-                  Car Dealership Web
-                </h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end gap-[30px]">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-between items-center w-full">
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-              Home Rental (Mobile)
-            </h1>
-            <img
-              src={Frame161}
-              alt="Ecommerce site"
-              className="w-full h-auto"
-            />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">Bahay</h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-[575px] cursor-pointer w-full h-[500px] border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]">
-            <div className="flex items-center justify-between">
-              <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
-                Dealership
-              </h1>
-            </div>
-            <img src={Car} alt="Ecommerce site" className="w-full h-auto" />
-            <div className="flex justify-between items-end">
-              <div className="flex flex-col gap-2.5 max-w-[360px] w-full">
-                <h1 className="font-medium text-2xl leading-[24px]">
-                  Car Dealership Web
-                </h1>
-                <p className="font-normal leading-[24px] text-[#3A3A3A]">
-                  A shoe store web application which simplifies user purchase
-                  process
-                </p>
-              </div>
-              <div className="flex-1 flex justify-end gap-[30px]">
-                <Button className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]">
-                  View
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

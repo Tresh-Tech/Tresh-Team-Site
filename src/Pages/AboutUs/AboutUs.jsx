@@ -1,26 +1,150 @@
 import Button from "@/components/Button/Button";
-import "react";
-// import { teamData } from "./TeamData";
+import { useEffect, useRef } from "react";
 import teamMeet from "../../assets/Images/team of four people discussing team project.png";
 import quote from "../../assets/Images/quote.png";
 import devLang from "../../assets/Images/Frontend development and programming languages.png";
 import mobileApp from "../../assets/Images/Successful mobile app startup launch.png";
-// import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
   const navigate = useNavigate();
 
+  // Refs for animated elements
+  const headerRef = useRef(null);
+  const missionRef = useRef(null);
+  const visionRef = useRef(null);
+  const valueRef = useRef(null);
+  const card1Ref = useRef(null);
+  const card2Ref = useRef(null);
+  const card3Ref = useRef(null);
+  const card4Ref = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation - scale up
+      if (headerRef.current) {
+        gsap.from(headerRef.current, {
+          scale: 0.8,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+        });
+      }
+
+      // Mission card - slide from left
+      if (missionRef.current) {
+        gsap.from(missionRef.current, {
+          x: -100,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        });
+      }
+
+      // Vision card - scale up
+      if (visionRef.current) {
+        gsap.from(visionRef.current, {
+          scale: 0.5,
+          opacity: 0,
+          duration: 0.8,
+          ease: "back.out(1.7)",
+        });
+      }
+
+      // Value card - slide from right
+      if (valueRef.current) {
+        gsap.from(valueRef.current, {
+          x: 100,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+        });
+      }
+
+      // Process cards - alternating left and right
+      if (card1Ref.current) {
+        gsap.from(card1Ref.current, {
+          x: -150,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card1Ref.current,
+            start: "top 80%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+
+      if (card2Ref.current) {
+        gsap.from(card2Ref.current, {
+          x: 150,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card2Ref.current,
+            start: "top 80%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+
+      if (card3Ref.current) {
+        gsap.from(card3Ref.current, {
+          x: -150,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card3Ref.current,
+            start: "top 80%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+
+      if (card4Ref.current) {
+        gsap.from(card4Ref.current, {
+          x: 150,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card4Ref.current,
+            start: "top 80%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+          },
+        });
+      }
+    });
+
+    // Cleanup
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] md:gap-[40px]">
-      <div className="flex flex-col items-center gap-[10px] max-sm:gap-0">
+      <div
+        ref={headerRef}
+        className="flex flex-col items-center gap-[10px] max-sm:gap-0"
+      >
         <h1 className="text-[30px] font-semibold">About us</h1>
-        <p className="text-[clamp(1rem,5vw,1.5rem)] text-center  font-medium text-[#3A3A3A]">
+        <p className="text-[clamp(1rem,5vw,1.5rem)] text-center md:w-[85%] font-medium text-[#3A3A3A]">
           We&apos;re a passionate collective of web developers, UI/UX designers,
           and copywriters dedicated to crafting exceptional digital
           experiences,We&apos;re a passionate collective of web developers,
           UI/UX designers, and copywriters dedicated to crafting exceptional
-          digital experiencesUI/UX designers, and copywriters dedicated to
+          digital experiences UI/UX designers, and copywriters dedicated to
           crafting exceptional digital experiences
         </p>
         <Button
@@ -32,7 +156,10 @@ const AboutUs = () => {
       </div>
 
       <div className="flex flex-wrap justify-center items-center gap-[20px]">
-        <div className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1">
+        <div
+          ref={missionRef}
+          className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1"
+        >
           <h1 className="text-[24px] text-center font-medium leading-[130%]">
             Our Mission
           </h1>
@@ -41,7 +168,10 @@ const AboutUs = () => {
             enhance efficiency, and create lasting value for our clients.
           </p>
         </div>
-        <div className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1">
+        <div
+          ref={visionRef}
+          className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1"
+        >
           <h1 className="text-[24px] text-center font-medium leading-[130%]">
             Our Vision
           </h1>
@@ -50,7 +180,10 @@ const AboutUs = () => {
             innovation, transformation, and scalable growth.
           </p>
         </div>
-        <div className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1">
+        <div
+          ref={valueRef}
+          className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1"
+        >
           <h1 className="text-[24px] text-center font-medium leading-[130%]">
             Value
           </h1>
@@ -61,56 +194,12 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* <div className="flex flex-col items-center justify-center gap-[30px]">
-        <div className="flex flex-col items-center gap-2.5">
-          <h1 className="text-[30px] md:text-[40px] text-center leading-[130%] font-bold">
-            Team Tresh
-          </h1>
-          <p className="text-base md:text-[24px] leading-[33px] font-medium text-[#3A3A3A] text-center">
-            Meet the team leads of experts.
-          </p>
-        </div>
-        <div className="flex flex-col items-center gap-[30px]">
-          <div className="flex flex-wrap gap-5 items-center justify-center">
-            {teamData.map((member, index) => (
-              <div
-                key={index}
-                className="relative flex-shrink-0 flex flex-col justify-end items-center isolate max-w-[380px] rounded-[20px] overflow-hidden border w-full h-[350px] md:h-[480px]"
-              >
-                <img
-                  className="w-full h-full object-cover object-center"
-                  src={member.image}
-                  alt={`${member.name} - ${member.position}`}
-                  loading="lazy"
-                />
-                <div className="absolute px-6 bottom-5 bg-transparent flex items-center justify-between w-full">
-                  <div>
-                    <h1 className="text-[24px] leading-[33px] font-semibold text-white">
-                      {member.name}
-                    </h1>
-                    <p className="text-[16px] leading-[22px] font-normal text-white">
-                      {member.position}
-                    </p>
-                  </div>
-                  <div className="border border-black/10 rounded-full flex items-center justify-center w-8 h-8 p-1 bg-[#D9D9D9]">
-                    <FaArrowRight className="-rotate-45" size={20} />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <Button
-            className="shadow-md bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]"
-            onClick={() => navigate("/see")}
-          >
-            See More
-          </Button>
-        </div>
-      </div> */}
-
       <div className="flex flex-col gap-[30px]">
         <div className="flex flex-wrap gap-[50px] justify-around items-center">
-          <div className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+          <div
+            ref={card1Ref}
+            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+          >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 1. Client Meeting
@@ -126,7 +215,10 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+          <div
+            ref={card2Ref}
+            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+          >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 2. Quotation
@@ -146,7 +238,10 @@ const AboutUs = () => {
 
       <div className="flex flex-col gap-[30px]">
         <div className="flex flex-wrap gap-[50px] justify-around items-center">
-          <div className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+          <div
+            ref={card3Ref}
+            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+          >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 3. Software Development
@@ -162,7 +257,10 @@ const AboutUs = () => {
             </div>
           </div>
 
-          <div className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center">
+          <div
+            ref={card4Ref}
+            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+          >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 4. Launch

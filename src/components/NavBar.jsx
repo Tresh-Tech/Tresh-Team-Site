@@ -19,7 +19,7 @@ const NavBar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="relative z-50 w-full px-6 md:px-16 py-3 bg-white shadow-md">
+    <nav className="w-full px-6 md:px-16 py-3 bg-white shadow-md">
       <div className="flex items-center justify-between">
         {/* Logo + Toggle */}
         <div className="flex items-center justify-between w-full md:w-auto">
@@ -30,7 +30,7 @@ const NavBar = () => {
               alt="Team Tresh Logo"
             />
             <h1 className="text-md md:text-xl font-semibold uppercase">
-              Team Tresh
+              Tresh Tech
             </h1>
           </Link>
 
@@ -47,12 +47,15 @@ const NavBar = () => {
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center space-x-8 text-lg font-medium">
           {pages.map((page) => (
-            <li key={page.name} className="relative group rounded-[30px] overflow-hidden p-1">
-              <Link className="relative" to={page.path}>
+            <li
+              key={page.name}
+              className="relative group rounded-[30px] overflow-hidden p-1 hover-mama"
+            >
+              <Link className="relative ho" to={page.path}>
                 {page.name}
                 <div
                   className={`${
-                    location.pathname === page.path ? "mama" : ""
+                    location.pathname === page.path ? "mama w-full ho" : ""
                   } absolute w-full h-0.5 transition-all duration-300`}
                 ></div>
               </Link>

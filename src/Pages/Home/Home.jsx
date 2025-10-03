@@ -9,7 +9,7 @@ import Section7 from "./Section7";
 const Home = () => {
   return (
     <>
-      <div className=" px-4 py-6 md:px-16 flex-1">
+      <div className=" px-4 py-6 md:px-16 flex-1 overflow-x-hidden">
         <Section1 />
         <hr />
         <Section2 />

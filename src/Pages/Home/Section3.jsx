@@ -2,21 +2,184 @@ import "react";
 import { FaAngleRight } from "react-icons/fa6";
 import Male from "../../assets/Images/Male designer drawing on a graphics tablet.svg";
 import MaleII from "../../assets/Images/code editing.svg";
-// import MaleIII from "../../assets/Images/code sign.svg";
-// import MaleIV from "../../assets/Images/digital design program interface.svg";
 import Button from "@/components/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Section3 = () => {
   const navigate = useNavigate();
+
+  // Create refs for animated elements
+  const headingRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const centerDecorRef = useRef(null);
+  const topRowRef = useRef(null);
+  const bottomRowRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    // Heading animation - Scale up with fade
+    gsap.fromTo(
+      headingRef.current,
+      {
+        scale: 0.8,
+        y: -30,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "bottom 100%",
+ scrub: 1,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Description animation - Fade in from bottom
+    gsap.fromTo(
+      descriptionRef.current,
+      {
+        y: 30,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: descriptionRef.current,
+          start: "bottom 100%",
+ scrub: 1,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Center decoration - Scale and rotate
+    gsap.fromTo(
+      centerDecorRef.current,
+      {
+        scale: 0,
+        rotation: 0,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        rotation: 45,
+        opacity: 1,
+        duration: 1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: centerDecorRef.current,
+          start: "bottom 100%",
+ scrub: 1,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Top row cards - Stagger from sides
+    gsap.fromTo(
+      topRowRef.current.children,
+      {
+        x: (index) => (index === 0 ? -100 : 100),
+        opacity: 0,
+        scale: 0.9,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: topRowRef.current,
+          start: "bottom 100%",
+ scrub: 1,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Bottom row cards - Stagger from sides
+    gsap.fromTo(
+      bottomRowRef.current.children,
+      {
+        x: (index) => (index === 0 ? -100 : 100),
+        opacity: 0,
+        scale: 0.9,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: bottomRowRef.current,
+          start: "bottom 100%",
+ scrub: 1,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Button animation - Scale and bounce
+    gsap.fromTo(
+      buttonRef.current,
+      {
+        scale: 0,
+        opacity: 0,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 0.6,
+        ease: "back.out(2)",
+        scrollTrigger: {
+          trigger: buttonRef.current,
+          start: "bottom 100%",
+ scrub: 1,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <>
-      <div className="py-6 px-2 md:py-12 md:px-6 flex flex-col gap-6 md:gap-[30px]">
+      <div className="py-12 px-2 md:py-12 md:px-6 flex flex-col gap-6 md:gap-[30px]">
         {/* Section Heading */}
-        <div className="flex flex-col items-center gap-2.5 max-sm:gap-0">
-          <h1 className="text-[30px] md:text-[40px] leading-[130%] font-semibold">
+        <div className="flex flex-col items-center ">
+          <h1
+            ref={headingRef}
+            className="text-[30px] md:text-[40px] leading-[130%] font-semibold"
+          >
             Services
           </h1>
-          <p className="text-base md:text-[24px] text-center leading-[130%] font-medium text-[#3A3A3A]">
+          <p
+            ref={descriptionRef}
+            className="text-base md:text-[24px] text-center leading-[130%] font-medium text-[#3A3A3A] sm:w-[90%]"
+          >
             At <strong>Tresh</strong> we provide a wide range of technology
             services tailored to meet the unique needs of businesses of all
             sizes.
@@ -25,7 +188,10 @@ const Section3 = () => {
 
         {/* Cards */}
         <div className="flex relative flex-col items-center w-full p-0 gap-10">
-          <div className="hidden md:block max-w-[calc(100%-900px)] w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45">
+          <div
+            ref={centerDecorRef}
+            className="hidden md:block max-w-[calc(100%-900px)] w-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45"
+          >
             <div className="relative">
               <div className="borderMe w-full"></div>
               <div className="borderMe w-full rotate-90"></div>
@@ -33,7 +199,10 @@ const Section3 = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-10 md:flex-row w-full z-50 justify-between items-center">
+          <div
+            ref={topRowRef}
+            className="flex flex-col gap-10 md:flex-row w-full z-50 justify-between items-center"
+          >
             <div className=" max-w-[500px] w-full h-[234px] rounded-lg overflow-hidden flex items-center order-2 bg-white flex-grow-0 border border-[#555555]/30 shadow-sm gap-3">
               <div className="flex flex-col gap-8 pl-3">
                 <div className="">
@@ -71,7 +240,10 @@ const Section3 = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-10 md:flex-row w-full z-50 justify-between items-center">
+          <div
+            ref={bottomRowRef}
+            className="flex flex-col gap-10 md:flex-row w-full z-50 justify-between items-center"
+          >
             <div className=" max-w-[500px] w-full h-[234px] rounded-lg overflow-hidden flex items-center bg-white flex-grow-0 border border-[#555555]/30 shadow-sm gap-3">
               <div className="flex-1 flex flex-col items-start gap-8 pl-3">
                 <div className="w-[100px]">
@@ -111,7 +283,7 @@ const Section3 = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center">
+        <div ref={buttonRef} className="flex items-center justify-center">
           <Button
             className="shadow-md border border-[##4D4D4D1A] bg-[#1d4ed8] text-white py-2.5 font-normal px-5 rounded-[30px]"
             onClick={() => navigate("/services")}
