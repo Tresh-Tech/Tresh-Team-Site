@@ -5,20 +5,17 @@ import group from "../../assets/Images/group of young people discussing work iss
 import Button from "@/components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Section7 = () => {
   const navigate = useNavigate();
 
-  // Create refs for animated elements
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
   const imageRef = useRef(null);
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // ANIMATION 1: Title - Slide from LEFT + Fade
     gsap.fromTo(
       titleRef.current,
       {
@@ -33,7 +30,6 @@ const Section7 = () => {
       }
     );
 
-    // ANIMATION 2: Description - Slide from RIGHT + Fade
     gsap.fromTo(
       descriptionRef.current,
       {
@@ -49,7 +45,6 @@ const Section7 = () => {
       }
     );
 
-    // ANIMATION 3: Image - Scale up + Fade
     gsap.fromTo(
       imageRef.current,
       {
@@ -65,13 +60,12 @@ const Section7 = () => {
         scrollTrigger: {
           trigger: imageRef.current,
           start: "bottom 100%",
- scrub: 1,
-          toggleActions: "play none none reverse",
+//  scrub: 1,
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // ANIMATION 4: Button - Scale up with bounce + Fade
     gsap.fromTo(
       buttonRef.current,
       {
@@ -89,13 +83,12 @@ const Section7 = () => {
         scrollTrigger: {
           trigger: buttonRef.current,
           start: "bottom 100%",
- scrub: 1,
-          toggleActions: "play none none reverse",
+//  scrub: 1,
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

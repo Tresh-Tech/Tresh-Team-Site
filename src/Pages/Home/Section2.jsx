@@ -10,7 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Section2 = () => {
-  // Create refs for elements you want to animate
   const section1Ref = useRef(null);
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
@@ -19,32 +18,30 @@ const Section2 = () => {
   const marketingRef = useRef(null);
 
   useEffect(() => {
-    // TEMPLATE 1: Fade in from LEFT
     gsap.fromTo(
       logoRef.current,
       {
-        x: -100, // Start 100px to the left
+        x: -100,
         opacity: 0,
       },
       {
-        x: 0, // End at original position
+        x: 0,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
           trigger: logoRef.current,
           start: "top 80%",
-          scrub: 1, // Animation starts when top of element hits 80% of viewport
-          toggleActions: "play none none none", // play on enter
+          // scrub: 1,
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // TEMPLATE 2: Fade in from RIGHT
     gsap.fromTo(
       phoneRef.current,
       {
-        x: 100, // Start 100px to the right
+        x: 100,
         opacity: 0,
       },
       {
@@ -61,15 +58,14 @@ const Section2 = () => {
       }
     );
 
-    // TEMPLATE 3: SCALE UP with fade
     gsap.fromTo(
       marketingRef.current,
       {
-        scale: 0.8, // Start at 80% size
+        scale: 0.8,
         opacity: 0,
       },
       {
-        scale: 1, // End at 100% size
+        scale: 1,
         opacity: 1,
         duration: 1,
         ease: "power3.out",
@@ -82,7 +78,6 @@ const Section2 = () => {
       }
     );
 
-    // TEMPLATE 4: Text animations from left
     gsap.fromTo(
       section1Ref.current.querySelectorAll("h1, p"),
       {
@@ -93,7 +88,7 @@ const Section2 = () => {
         x: 0,
         opacity: 1,
         duration: 0.8,
-        stagger: 0.2, // Delay between each element
+        stagger: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: section1Ref.current,
@@ -104,7 +99,6 @@ const Section2 = () => {
       }
     );
 
-    // TEMPLATE 5: Text animations from right
     gsap.fromTo(
       section2Ref.current.querySelectorAll("h1, p"),
       {
@@ -126,7 +120,6 @@ const Section2 = () => {
       }
     );
 
-    // TEMPLATE 6: Scale and fade text
     gsap.fromTo(
       section3Ref.current.querySelectorAll("h1, p"),
       {
@@ -150,7 +143,6 @@ const Section2 = () => {
       }
     );
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -159,12 +151,10 @@ const Section2 = () => {
   return (
     <>
       <div className="py-12 px-2 md:py-12 md:px-6 max-md:flex flex-col gap-12 relative">
-        {/* dotted line demacation */}
-        <div className="absolute hidden md:flex justify-center left-[45%] top-[45.2%] -translate-y-1/2 -translate-x-1/2">
+        <div className="absolute hidden md:flex justify-center left-[50%] top-[45.2%] -translate-y-1/2 -translate-x-1/2">
           <img width="100%" height="auto" src={ChainLink} alt="" />
         </div>
 
-        {/* first section */}
         <div className="flex flex-col max-md:flex-col md:flex-row items-center gap-6 md:gap-36 justify-between">
           <div
             ref={logoRef}
@@ -194,7 +184,6 @@ const Section2 = () => {
           </div>
         </div>
 
-        {/* second section */}
         <div className="flex flex-col max-md:flex-col md:flex-row-reverse items-center gap-6 md:gap-36 justify-between my-[20px]">
           <div
             ref={phoneRef}
@@ -222,7 +211,6 @@ const Section2 = () => {
           </div>
         </div>
 
-        {/* third section */}
         <div className="flex max-md:flex-col md:flex-row items-center gap-6 md:gap-36 justify-between">
           <div
             ref={marketingRef}

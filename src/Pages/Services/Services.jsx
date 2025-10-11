@@ -7,13 +7,11 @@ import MaleII from "../../assets/Images/code editing.svg";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "@/components/Button/Button";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
   const navigate = useNavigate();
 
-  // Create refs for animated elements
   const headingRef = useRef(null);
   const subheadingRef = useRef(null);
   const card1Ref = useRef(null);
@@ -25,7 +23,6 @@ const Services = () => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // ANIMATION 1: Heading - Slide from LEFT
     gsap.fromTo(
       headingRef.current,
       {
@@ -38,7 +35,6 @@ const Services = () => {
       }
     );
 
-    // ANIMATION 2: Subheading - Slide from RIGHT
     gsap.fromTo(
       subheadingRef.current,
       {
@@ -51,7 +47,6 @@ const Services = () => {
       }
     );
 
-    // ANIMATION 3: Card 1 - Slide from LEFT + Scale
     gsap.fromTo(
       card1Ref.current,
       {
@@ -72,7 +67,6 @@ const Services = () => {
       }
     );
 
-    // ANIMATION 4: Card 2 - Slide from RIGHT + Scale
     gsap.fromTo(
       card2Ref.current,
       {
@@ -93,7 +87,6 @@ const Services = () => {
       }
     );
 
-    // ANIMATION 5: Card 3 - Slide from RIGHT + Scale
     gsap.fromTo(
       card3Ref.current,
       {
@@ -114,7 +107,6 @@ const Services = () => {
       }
     );
 
-    // ANIMATION 6: Card 4 - Slide from LEFT + Scale
     gsap.fromTo(
       card4Ref.current,
       {
@@ -130,7 +122,7 @@ const Services = () => {
           trigger: card4Ref.current,
           start: "bottom 100%",
           end: "bottom 50%",
-          scrub: 1,
+          // scrub: 1,
         },
       }
     );
@@ -151,12 +143,11 @@ const Services = () => {
           trigger: card5Ref.current,
           start: "bottom 100%",
           end: "bottom 50%",
-          scrub: 1,
+          // scrub: 1,
         },
       }
     );
 
-    // ANIMATION 8: Card 6 - Slide from RIGHT + Scale
     gsap.fromTo(
       card6Ref.current,
       {
@@ -172,12 +163,11 @@ const Services = () => {
           trigger: card6Ref.current,
           start: "bottom 100%",
           end: "bottom 50%",
-          scrub: 1,
+          // scrub: 1,
         },
       }
     );
 
-    // ANIMATION 9: Button - Scale up
     gsap.fromTo(
       buttonRef.current,
       {
@@ -191,12 +181,11 @@ const Services = () => {
           trigger: buttonRef.current,
           start: "bottom 100%",
           end: "bottom 50%",
-          scrub: 1,
+          // scrub: 1,
         },
       }
     );
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -216,7 +205,6 @@ const Services = () => {
         </p>
       </div>
       <div className="w-full flex flex-col gap-y-10">
-        {/* flex 1 */}
         <div className="flex flex-col md:flex-row w-full gap-[40px] justify-center items-center flex-1">
           <Link to="/services/details/1" state={{ id: 1, src: Male }}>
             <div
@@ -263,7 +251,6 @@ const Services = () => {
             </div>
           </Link>
         </div>
-        {/* flex 2 */}
         <div className="flex flex-col md:flex-row-reverse w-full gap-[40px] justify-center items-center flex-1">
           <Link to="/services/details/3" state={{ id: 3, src: Male }}>
             <div
@@ -312,7 +299,6 @@ const Services = () => {
             </div>
           </Link>
         </div>
-        {/* flex 3 */}
         <div className="flex flex-col md:flex-row w-full gap-[40px] justify-center items-center flex-1">
           <Link to="/services/details/5" state={{ id: 5, src: Male }}>
             <div

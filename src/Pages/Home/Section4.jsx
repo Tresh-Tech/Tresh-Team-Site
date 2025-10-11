@@ -10,14 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 const Section4 = () => {
   const navigate = useNavigate();
 
-  // Create refs for animated elements
   const headingRef = useRef(null);
   const subtitleRef = useRef(null);
   const cardsContainerRef = useRef(null);
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // Heading animation - Fade in from top with scale
     gsap.fromTo(
       headingRef.current,
       {
@@ -34,7 +32,6 @@ const Section4 = () => {
       }
     );
 
-    // Subtitle animation - Fade in with delay
     gsap.fromTo(
       subtitleRef.current,
       {
@@ -50,7 +47,6 @@ const Section4 = () => {
       }
     );
 
-    // Testimonial cards - Stagger animation from bottom with scale
     gsap.fromTo(
       cardsContainerRef.current.children,
       {
@@ -70,7 +66,6 @@ const Section4 = () => {
       }
     );
 
-    // Button animation - Scale with bounce
     gsap.fromTo(
       buttonRef.current,
       {
@@ -85,13 +80,12 @@ const Section4 = () => {
         scrollTrigger: {
           trigger: buttonRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Cleanup
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

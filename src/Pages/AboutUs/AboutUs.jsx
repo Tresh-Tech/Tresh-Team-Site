@@ -26,7 +26,6 @@ const AboutUs = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header animation - scale up
       if (headerRef.current) {
         gsap.from(headerRef.current, {
           scale: 0.8,
@@ -36,7 +35,6 @@ const AboutUs = () => {
         });
       }
 
-      // Mission card - slide from left
       if (missionRef.current) {
         gsap.from(missionRef.current, {
           x: -100,
@@ -46,7 +44,6 @@ const AboutUs = () => {
         });
       }
 
-      // Vision card - scale up
       if (visionRef.current) {
         gsap.from(visionRef.current, {
           scale: 0.5,
@@ -56,7 +53,6 @@ const AboutUs = () => {
         });
       }
 
-      // Value card - slide from right
       if (valueRef.current) {
         gsap.from(valueRef.current, {
           x: 100,
@@ -66,7 +62,6 @@ const AboutUs = () => {
         });
       }
 
-      // Process cards - alternating left and right
       if (card1Ref.current) {
         gsap.from(card1Ref.current, {
           x: -150,
@@ -75,8 +70,7 @@ const AboutUs = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: card1Ref.current,
-            start: "top 80%",
-            scrub: 1,
+            start: "top 90%",
             toggleActions: "play none none reverse",
           },
         });
@@ -90,8 +84,7 @@ const AboutUs = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: card2Ref.current,
-            start: "top 80%",
-            scrub: 1,
+            start: "top 90%",
             toggleActions: "play none none reverse",
           },
         });
@@ -105,8 +98,7 @@ const AboutUs = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: card3Ref.current,
-            start: "top 80%",
-            scrub: 1,
+            start: "top 90%",
             toggleActions: "play none none reverse",
           },
         });
@@ -120,20 +112,18 @@ const AboutUs = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: card4Ref.current,
-            start: "top 80%",
-            scrub: 1,
+            start: "top 90%",
             toggleActions: "play none none reverse",
           },
         });
       }
     });
 
-    // Cleanup
     return () => ctx.revert();
   }, []);
 
   return (
-    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] md:gap-[40px]">
+    <div className="py-12 px-7 md:px-16 flex flex-col flex-1 gap-[30px] md:gap-[50px]">
       <div
         ref={headerRef}
         className="flex flex-col items-center gap-[10px] max-sm:gap-0"
@@ -141,21 +131,17 @@ const AboutUs = () => {
         <h1 className="text-[30px] font-semibold">About us</h1>
         <p className="text-[clamp(1rem,5vw,1.5rem)] text-center md:w-[85%] font-medium text-[#3A3A3A]">
           We&apos;re a passionate collective of web developers, UI/UX designers,
-          and copywriters dedicated to crafting exceptional digital
-          experiences,We&apos;re a passionate collective of web developers,
-          UI/UX designers, and copywriters dedicated to crafting exceptional
-          digital experiences UI/UX designers, and copywriters dedicated to
-          crafting exceptional digital experiences
+          and copywriters dedicated to crafting exceptional digital experiences,
         </p>
-        <Button
+        {/* <Button
           className="shadow-md mt-4 bg-[#1d4ed8] text-white py-2.5 px-5 rounded-[30px]"
           onClick={() => navigate("/contact-us")}
         >
           Contact Us
-        </Button>
+        </Button> */}
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-[20px]">
+      {/* <div className="flex flex-wrap justify-center items-center gap-[20px]">
         <div
           ref={missionRef}
           className="flex flex-col gap-[10px] max-w-[398px] w-full p-5 max-sm:gap-1"
@@ -165,7 +151,7 @@ const AboutUs = () => {
           </h1>
           <p className="text-[16px] text-center text-[#4D4D4D] font-normal leading-[26px]">
             To harness the power of technology to solve complex challenges,
-            enhance efficiency, and create lasting value for our clients.
+            enhance efficiency, and create lasting value
           </p>
         </div>
         <div
@@ -192,13 +178,22 @@ const AboutUs = () => {
             honesty and transparency in every interaction.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex flex-col gap-[30px]">
+        <div
+          ref={headerRef}
+          className="flex flex-col items-center gap-[10px] max-sm:gap-0"
+        >
+          <h1 className="text-[30px] font-semibold">Development Process</h1>
+          <p className="text-[clamp(1rem,5vw,1.5rem)] text-center md:w-[85%] font-medium text-[#3A3A3A]">
+            Our Formula
+          </p>
+        </div>
         <div className="flex flex-wrap gap-[50px] justify-around items-center">
           <div
             ref={card1Ref}
-            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+            className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
@@ -217,7 +212,7 @@ const AboutUs = () => {
 
           <div
             ref={card2Ref}
-            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+            className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
@@ -240,7 +235,7 @@ const AboutUs = () => {
         <div className="flex flex-wrap gap-[50px] justify-around items-center">
           <div
             ref={card3Ref}
-            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+            className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
@@ -259,7 +254,7 @@ const AboutUs = () => {
 
           <div
             ref={card4Ref}
-            className="max-w-[580px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+            className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
             <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">

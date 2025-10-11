@@ -8,11 +8,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
-  // Create refs for elements you want to animate
   const titleRef = useRef(null);
   const accordionRef = useRef(null);
   const item1Ref = useRef(null);
@@ -22,7 +20,6 @@ const Section6 = () => {
   const item5Ref = useRef(null);
 
   useEffect(() => {
-    // TEMPLATE 1: Fade in and scale up
     gsap.fromTo(
       titleRef.current,
       {
@@ -37,12 +34,11 @@ const Section6 = () => {
       }
     );
 
-    // TEMPLATE 2: Slide in from LEFT
     gsap.fromTo(
       item1Ref.current,
       {
         opacity: 0,
-        x: -20, // Start 100px to the left
+        x: -20, 
       },
       {
         opacity: 1,
@@ -52,18 +48,17 @@ const Section6 = () => {
         scrollTrigger: {
           trigger: item1Ref.current,
           start: "bottom 100%",
- scrub: 1,
-          toggleActions: "play none none reverse",
+ 
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // TEMPLATE 3: Slide in from RIGHT
     gsap.fromTo(
       item2Ref.current,
       {
         opacity: 0,
-        x: -40, // Start 100px to the right
+        x: -40, 
       },
       {
         opacity: 1,
@@ -73,13 +68,12 @@ const Section6 = () => {
         scrollTrigger: {
           trigger: item2Ref.current,
           start: "bottom 100%",
- scrub: 1,
-          toggleActions: "play none none reverse",
+ 
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // TEMPLATE 4: Slide in from LEFT (alternate pattern)
     gsap.fromTo(
       item3Ref.current,
       {
@@ -94,13 +88,12 @@ const Section6 = () => {
         scrollTrigger: {
           trigger: item3Ref.current,
           start: "bottom 100%",
- scrub: 1,
-          toggleActions: "play none none reverse",
+ 
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // TEMPLATE 5: Slide in from RIGHT (alternate pattern)
     gsap.fromTo(
       item4Ref.current,
       {
@@ -115,13 +108,12 @@ const Section6 = () => {
         scrollTrigger: {
           trigger: item4Ref.current,
           start: "bottom 100%",
- scrub: 1,
-          toggleActions: "play none none reverse",
+ 
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // TEMPLATE 6: Scale and fade in
     gsap.fromTo(
       item5Ref.current,
       {
@@ -136,13 +128,12 @@ const Section6 = () => {
         scrollTrigger: {
           trigger: item4Ref.current,
           start: "bottom 100%",
-          scrub: 1,
-          toggleActions: "play none none reverse",
+          
+          toggleActions: "play none none none",
         },
       }
     );
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };

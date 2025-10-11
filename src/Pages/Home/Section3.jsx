@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Section3 = () => {
   const navigate = useNavigate();
 
-  // Create refs for animated elements
   const headingRef = useRef(null);
   const descriptionRef = useRef(null);
   const centerDecorRef = useRef(null);
@@ -22,7 +21,6 @@ const Section3 = () => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    // Heading animation - Scale up with fade
     gsap.fromTo(
       headingRef.current,
       {
@@ -39,13 +37,12 @@ const Section3 = () => {
         scrollTrigger: {
           trigger: headingRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Description animation - Fade in from bottom
     gsap.fromTo(
       descriptionRef.current,
       {
@@ -61,13 +58,12 @@ const Section3 = () => {
         scrollTrigger: {
           trigger: descriptionRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Center decoration - Scale and rotate
     gsap.fromTo(
       centerDecorRef.current,
       {
@@ -84,13 +80,12 @@ const Section3 = () => {
         scrollTrigger: {
           trigger: centerDecorRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Top row cards - Stagger from sides
     gsap.fromTo(
       topRowRef.current.children,
       {
@@ -108,13 +103,12 @@ const Section3 = () => {
         scrollTrigger: {
           trigger: topRowRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Bottom row cards - Stagger from sides
     gsap.fromTo(
       bottomRowRef.current.children,
       {
@@ -132,13 +126,12 @@ const Section3 = () => {
         scrollTrigger: {
           trigger: bottomRowRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Button animation - Scale and bounce
     gsap.fromTo(
       buttonRef.current,
       {
@@ -153,13 +146,12 @@ const Section3 = () => {
         scrollTrigger: {
           trigger: buttonRef.current,
           start: "bottom 100%",
- scrub: 1,
+//  scrub: 1,
           toggleActions: "play none none none",
         },
       }
     );
 
-    // Cleanup
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -168,7 +160,6 @@ const Section3 = () => {
   return (
     <>
       <div className="py-12 px-2 md:py-12 md:px-6 flex flex-col gap-6 md:gap-[30px]">
-        {/* Section Heading */}
         <div className="flex flex-col items-center ">
           <h1
             ref={headingRef}
@@ -186,7 +177,6 @@ const Section3 = () => {
           </p>
         </div>
 
-        {/* Cards */}
         <div className="flex relative flex-col items-center w-full p-0 gap-10">
           <div
             ref={centerDecorRef}

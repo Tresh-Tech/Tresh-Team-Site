@@ -9,11 +9,9 @@ import ContactUsForm from "./ContactUsForm";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactUs = () => {
-  // Refs for animated elements
   const headerRef = useRef(null);
   const emailRef = useRef(null);
   const callRef = useRef(null);
@@ -23,7 +21,6 @@ const ContactUs = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header animation - scale up and fade in
       if (headerRef.current) {
         gsap.from(headerRef.current, {
           scale: 0.8,
@@ -33,7 +30,6 @@ const ContactUs = () => {
         });
       }
 
-      // Email section - slide from left
       if (emailRef.current) {
         gsap.from(emailRef.current, {
           x: -100,
@@ -44,12 +40,11 @@ const ContactUs = () => {
           scrollTrigger: {
             trigger: emailRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       }
 
-      // Call section - scale up
       if (callRef.current) {
         gsap.from(callRef.current, {
           scale: 0.5,
@@ -60,12 +55,11 @@ const ContactUs = () => {
           scrollTrigger: {
             trigger: callRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       }
 
-      // Social section - slide from right
       if (socialRef.current) {
         gsap.from(socialRef.current, {
           scale: 0.5,
@@ -76,12 +70,11 @@ const ContactUs = () => {
           scrollTrigger: {
             trigger: callRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       }
 
-      // Location section - slide from left
       if (locationRef.current) {
         gsap.from(locationRef.current, {
           scale: 0.5,
@@ -92,12 +85,11 @@ const ContactUs = () => {
           scrollTrigger: {
             trigger: callRef.current,
             start: "top 80%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       }
 
-      // Form section - scale up from bottom
       if (formRef.current) {
         gsap.from(formRef.current, {
           y: 100,
@@ -109,13 +101,12 @@ const ContactUs = () => {
             trigger: formRef.current,
             start: "top 85%",
             scrub: 1,
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
         });
       }
     });
 
-    // Cleanup
     return () => ctx.revert();
   }, []);
 

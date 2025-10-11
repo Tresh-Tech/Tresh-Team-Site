@@ -5,14 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "@/components/Button/Button";
 import { ContentData } from "./ContentData";
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const AllProjects = () => {
   const [imgLoaded, setImgLoaded] = useState(false);
   const navigate = useNavigate();
 
-  // Create refs for animated elements
   const headingRef = useRef(null);
   const subheadingRef = useRef(null);
   const projectRefs = useRef([]);
@@ -32,7 +30,6 @@ const AllProjects = () => {
   }, [cart]);
 
   useEffect(() => {
-    // ANIMATION 1: Heading - Slide from LEFT
     gsap.fromTo(
       headingRef.current,
       {
@@ -45,7 +42,6 @@ const AllProjects = () => {
       }
     );
 
-    // ANIMATION 2: Subheading - Slide from RIGHT
     gsap.fromTo(
       subheadingRef.current,
       {
@@ -58,17 +54,15 @@ const AllProjects = () => {
       }
     );
 
-    // ANIMATION 3: Project Cards - Alternating LEFT and RIGHT
     projectRefs.current.forEach((ref, index) => {
       if (ref) {
-        // Alternate between left and right based on index
         const isEven = index % 2 === 0;
 
         gsap.fromTo(
           ref,
           {
             opacity: 0,
-            x: isEven ? -100 : 100, // Even indices from LEFT, odd from RIGHT
+            x: isEven ? -100 : 100, 
             scale: 0.9,
           },
           {
@@ -86,7 +80,6 @@ const AllProjects = () => {
       }
     });
 
-    // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -111,8 +104,8 @@ const AllProjects = () => {
           <div
             key={Id}
             ref={(el) => (projectRefs.current[Id] = el)}
-            className="max-w-[575px] w-full border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]"
-          >
+            className="max-w-[500px] w-full border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]"
+          >{/*575*/}
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 {data.businessType}
