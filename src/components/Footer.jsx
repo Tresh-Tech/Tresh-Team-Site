@@ -18,32 +18,31 @@ const Footer = () => {
             <div className="flex flex-col gap-[10px]">
               <div className="flex items-center Logo space-x-2">
                 <img src={Logo} className="w-[40px] h-[40px]" alt="" />
-                <h1 className="text-md md:text-xl text-white font-semibold uppercase">
-                  Team Tresh
+                <h1 className="text-sm text-white md:text-md lg:text-lg font-semibold uppercase">
+                  Tresh Tech
                 </h1>
               </div>
-              <p className="text-md md:text-[20px] leading-[27px] text-white">
+              <p className="text-md max-sm:leading-[20px] md:text-[16px] leading-[27px] text-white">
                 Join a team of creatives that are ready to connect with other
                 creatives and work
               </p>
             </div>
-            <ul className="flex flex-col md:flex-row items-start gap-4 md:gap-[70px] text-lg font-medium">
-              <li className="text-lg underline font-normal leading-[120%] text-white">
+            <ul className="flex flex-col md:flex-row items-start gap-4 md:gap-[40px] text-lg font-medium">
+              <li className="text-sm underline underline-offset-2 font-normal leading-[120%] text-white">
                 <Link to="/">Home</Link>
               </li>
-              <li className="text-lg underline font-normal leading-[120%] text-white">
+              <li className="text-sm underline underline-offset-2 font-normal leading-[120%] text-white">
                 <Link to="/services">Services</Link>
               </li>
-              <li className="text-lg underline font-normal leading-[120%] text-white">
+              <li className="text-sm underline underline-offset-2 font-normal leading-[120%] text-white">
                 <Link to="/projects">Projects</Link>
               </li>
-              <li className="text-lg underline font-normal leading-[120%] text-white">
+              <li className="text-sm underline underline-offset-2 font-normal leading-[120%] text-white">
                 <Link to="/about-us">About us</Link>
               </li>
             </ul>
           </div>
           /
-          
           {/* <div className=" md:absolute right-0 bottom-0 max-md:mt-12 flex flex-col gap-5">
             <h1 className="text-[20px] text-center font-semibold leading-[30px] text-white">
               Subscribe to our newsletter
@@ -69,16 +68,17 @@ const Footer = () => {
           <div className=" border-dashed border border-black"></div>
         </div>
         <div className="flex gap-4 md:gap-0 flex-col md:flex-row md:justify-between md:items-center">
-          <div className="flex items-center border w-fit rounded-[4px] gap-[41px] p-2">
+          {/* <div className="flex items-center border w-fit rounded-[4px] gap-[41px] p-2">
             <h1 className="text-white">English</h1>
             <FaAngleRight color="white" size={20} />
-          </div>
+          </div> */}
           <div className="flex items-center justify-center gap-[41px]">
             <FaTwitter size={25} color="#4CD2FF" />
             <FaFacebook size={25} color="#4C8AFF" />
             <FaLinkedin size={25} color="#5378D0" />
             <FaYoutube size={25} color="#FF4C4C" />
           </div>
+          <div className="text-white">&copy; Tresh Tech, 2025</div>
         </div>
       </div>
     </>

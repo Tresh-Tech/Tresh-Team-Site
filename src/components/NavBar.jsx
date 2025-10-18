@@ -26,10 +26,10 @@ const NavBar = () => {
           <Link to="/" className="flex items-center space-x-2">
             <img
               src={Logo}
-              className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]"
+              className="w-[30px] h-[30px] lg:w-[50px] lg:h-[50px]"
               alt="Team Tresh Logo"
             />
-            <h1 className="text-md md:text-xl font-semibold uppercase">
+            <h1 className="text-sm md:text-md lg:text-lg font-semibold uppercase">
               Tresh Tech
             </h1>
           </Link>
@@ -45,13 +45,13 @@ const NavBar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center space-x-8 text-lg font-medium">
+        <ul className="hidden md:flex items-center space-x-5 lg:space-x-8 text-lg font-medium">
           {pages.map((page) => (
             <li
               key={page.name}
-              className="relative group rounded-[30px] overflow-hidden p-1 hover-mama"
+              className="relative flex group rounded-[30px] overflow-hidden p-1 hover-mama"
             >
-              <Link className="relative ho" to={page.path}>
+              <Link className="relative ho md:text-sm" to={page.path}>
                 {page.name}
                 <div
                   className={`${
@@ -65,7 +65,7 @@ const NavBar = () => {
 
         {/* Desktop Button */}
         <Button
-          className="hidden md:inline-block shadow-md bg-[#1d4ed8] text-white text-sm md:text-md py-2.5 px-5 rounded-[30px]"
+          className="hidden md:inline-block shadow-md bg-[#1d4ed8] text-white md:text-sm lg:text-md py-1.5 px-3 md:py-2 md:px-4 lg:py-2.5 lg:px-5 rounded-[30px]"
           onClick={() => navigate("/contact-us")}
         >
           Contact Us
