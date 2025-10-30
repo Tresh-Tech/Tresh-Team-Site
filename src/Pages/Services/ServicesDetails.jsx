@@ -13,26 +13,28 @@ const ServicesDetails = () => {
   if (!details || !imageSrc) return <p>image not found</p>;
   return (
     <>
-      <button
-        onClick={() => navigate(-1)}
-        className="pt-5 flex items-center gap-1.5 md:gap-2.5 max-md:ml-2"
-      >
-        <FaAngleLeft size={20} />
-        <h3 className="textbase md:text-2xl leading-[130%] font-normal">
-          Services
-        </h3>
-      </button>
-      <div className="py-5 px-7 md:px-16 flex flex-col items-center gap-[30px]">
+      <div className="py-5 px-7 pb-16 md:px-16 flex flex-col items-center gap-[30px]">
+        <div className="w-full">
+          <button
+            onClick={() => navigate(-1)}
+            className="pt-5 flex items-center gap-1.5 md:gap-2.5 max-md:ml-2"
+          >
+            <FaAngleLeft size={20} />
+            <h3 className="textbase md:text-2xl leading-[130%] font-normal">
+              Services
+            </h3>
+          </button>
+        </div>
         <div className="flex md:flex-row flex-col flex-1 border border-[#D9D9D9] max-md:gap-8 h-[210px] items-center justify-between w-full rounded-lg shadow-sm pt-3">
           <div className="flex flex-col ml-5 max-md:w-full max-md:m-0">
-            <h2 className="text-[30px] text-center md:text-[40px] leading-[36px] font-semibold">
+            <h2 className="text-[32px] leading-[36px] font-semibold">
               {details.title}
             </h2>
           </div>
           <img
             src={imageSrc}
             alt={details.title}
-            className="w-[450px] h-full"
+            className="w-[350px] h-full"
             height="auto"
           />
         </div>

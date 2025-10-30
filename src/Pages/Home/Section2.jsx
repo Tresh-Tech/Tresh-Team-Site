@@ -52,7 +52,7 @@ const Section2 = () => {
         scrollTrigger: {
           trigger: phoneRef.current,
           start: "bottom 100%",
-          scrub: 1,
+          // scrub: 1,
           toggleActions: "play none none none",
         },
       }
@@ -72,7 +72,7 @@ const Section2 = () => {
         scrollTrigger: {
           trigger: marketingRef.current,
           start: "bottom 100%",
-          scrub: 1,
+          // scrub: 1,
           toggleActions: "play none none none",
         },
       }
@@ -93,7 +93,7 @@ const Section2 = () => {
         scrollTrigger: {
           trigger: section1Ref.current,
           start: "bottom 100%",
-          scrub: 1,
+          // scrub: 1,
           toggleActions: "play none none none",
         },
       }
@@ -114,7 +114,7 @@ const Section2 = () => {
         scrollTrigger: {
           trigger: section2Ref.current,
           start: "bottom 100%",
-          scrub: 1,
+          // scrub: 1,
           toggleActions: "play none none none",
         },
       }
@@ -137,7 +137,7 @@ const Section2 = () => {
         scrollTrigger: {
           trigger: section3Ref.current,
           start: "bottom 100%",
-          scrub: 1,
+          // scrub: 1,
           toggleActions: "play none none none",
         },
       }
@@ -151,9 +151,9 @@ const Section2 = () => {
   return (
     <>
       <div className="py-12 px-2 md:py-12 md:px-6 max-md:flex flex-col gap-12 relative">
-        <div className="absolute hidden md:flex justify-center left-[50%] top-[45.2%] -translate-y-1/2 -translate-x-1/2">
+        {/* <div className="absolute hidden md:flex justify-center left-[50%] top-[45.2%] -translate-y-1/2 -translate-x-1/2">
           <img width="100%" height="auto" src={ChainLink} alt="" />
-        </div>
+        </div> */}
 
         <div className="flex flex-col max-md:flex-col md:flex-row items-center gap-6 md:gap-36 justify-between">
           <div

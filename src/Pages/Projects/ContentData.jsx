@@ -23,7 +23,7 @@ export const ContentData = [
     title: "Dashboard Mangement",
     description:
       "A shoe store web application which simplifies user purchase process.",
-    forSale: true,
+    forSale: false,
     price: 400
   },
   {
@@ -43,7 +43,7 @@ export const ContentData = [
     title: "Cars Rift",
     description:
       "We're a passionate collective of web developers, UI/UX designers, and copywriters dedicated to crafting exceptional.",
-      forSale: true,
+      forSale: false,
       price: 1200
   },
   {
