@@ -2,6 +2,8 @@ import ProjectCar from "../../assets/Images/ProjectCar.svg";
 import Car from "../../assets/Images/Main Design 1.svg";
 import WeiLogo from "../../assets/Images/Wei.svg";
 import Wei from "../../assets/Images/WeiDb.svg";
+import Traption from "../../assets/Images/traption.png";
+import TraptionLogo from "../../assets/Images/TraptionLogo.png";
 import dbManagementLogo from "../../assets/Images/dbManagement Logo.svg";
 import dBManagement from "../../assets/Images/dbmanagement.svg";
 export const ContentData = [
@@ -24,7 +26,7 @@ export const ContentData = [
     description:
       "A shoe store web application which simplifies user purchase process.",
     forSale: false,
-    price: 400
+    price: 400,
   },
   {
     businessType: "Website Vendor (Web And Mobile app)",
@@ -36,32 +38,14 @@ export const ContentData = [
     forSale: false,
   },
   {
-    businessType: "Car Dealership",
-    logo: ProjectCar,
-    homepg: Car,
-    projectLink: "",
-    title: "Cars Rift",
+    businessType: "Traption AI",
+    logo: TraptionLogo,
+    homepg: Traption,
+    projectLink: "https://traption.netlify.app/",
+    title: "Traption AI",
     description:
-      "We're a passionate collective of web developers, UI/UX designers, and copywriters dedicated to crafting exceptional.",
-      forSale: false,
-      price: 1200
-  },
-  {
-    businessType: "Dealership",
-    logo: ProjectCar,
-    homepg: Car,
-    projectLink: "",
-    title: "Car Website",
-    description:
-      "We're a passionate collective of web developers, UI/UX designers, and copywriters dedicated to crafting exceptional.",
-  },
-  {
-    businessType: "Dealership",
-    logo: ProjectCar,
-    homepg: Car,
-    projectLink: "",
-    title: "Car Website",
-    description:
-      "We're a passionate collective of web developers, UI/UX designers, and copywriters dedicated to crafting exceptional.",
+      "Transform your social media strategy with Traption's suite of AI-powered tools.",
+    forSale: false,
+    price: 1200,
   },
 ];
