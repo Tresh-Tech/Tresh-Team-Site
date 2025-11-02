@@ -80,18 +80,21 @@ const Footer = () => {
             {/* <Link to="/projects">
               <FaXTwitter size={25} color="#4CD2FF" />
             </Link> */}
-            <Link to="https://www.instagram.com/tresh-tech/">
+            <a href="https://www.instagram.com/tresh_tech/" target="_blank">
               <FaInstagram size={25} color="#4CD2FF" />
-            </Link>
-            <Link to="https://www.thread.com/@tresh-tech/">
-              <FaThreads size={25} color="#4C8AFF" />
-            </Link>
-            <Link to="https://www.linkedin.com/company/tresh-tech/">
+            </a>
+            <a href="https://www.thread.com/@tresh-tech/" target="_blank">
+              <FaThreads size={25} color="#d9d7eb" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/tresh-tech/"
+              target="_blank"
+            >
               <FaLinkedin size={25} color="#5378D0" />
-            </Link>
-            <Link to="https://www.linkedin.com/company/tresh-tech/">
-              <FaYoutube size={25} color="#FF4C4C" />
-            </Link>
+            </a>
+            <a href="https://x.com/tresh_tech" target="_blank">
+              <FaXTwitter size={25} color="#ffffff" />
+            </a>
           </div>
           <div className="text-slate-200 text-sm text-center">
             &copy; 2025 Tresh Tech

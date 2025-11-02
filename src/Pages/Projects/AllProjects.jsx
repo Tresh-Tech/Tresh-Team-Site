@@ -62,7 +62,7 @@ const AllProjects = () => {
           ref,
           {
             opacity: 0,
-            x: isEven ? -100 : 100, 
+            x: isEven ? -100 : 100,
             scale: 0.9,
           },
           {
@@ -105,7 +105,8 @@ const AllProjects = () => {
             key={Id}
             ref={(el) => (projectRefs.current[Id] = el)}
             className="max-w-[500px] w-full border-[0.5px] border-black/20 py-5 px-[30px] flex flex-col gap-5 rounded-[10px]"
-          >{/*575*/}
+          >
+            {/*575*/}
             <div className="flex justify-between items-center">
               <h1 className="font-medium text-xl leading-[24px] text-[#3A3A3A]">
                 {data.businessType}
@@ -126,7 +127,7 @@ const AllProjects = () => {
                 <img
                   src={data.homepg}
                   alt="Ecommerce site"
-                  className={`w-full h-auto z-10 ${
+                  className={`w-full h-auto z-10 shadow-lg rounded-lg ${
                     imgLoaded ? "" : "invisible"
                   }`}
                   onLoad={() => setImgLoaded(true)}
@@ -134,7 +135,12 @@ const AllProjects = () => {
               </div>
             </Link>
             <div className="flex flex-col gap-2.5 flex-auto">
-              <h1 className="font-medium text-2xl w-full">{data.title}</h1>
+              <div className="flex w-full gap-2 items-center">
+                <h1 className="font-medium text-2xl">{data.title}</h1>
+                <span className="text-xs bg-blue-100 px-3 py-[2px] rounded-xl">
+                  {data.pjType}
+                </span>
+              </div>
               <div className="flex flex-wrap lg:flex-nowrap gap-5 h-full">
                 <p className="font-normal min-w-[150px] leading-[24px] text-[#3A3A3A]">
                   <div className="line-clamp-3">{data.description}</div>

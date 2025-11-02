@@ -4,6 +4,8 @@ import {
   FaLinkedin,
   FaTwitter,
   FaLocationDot,
+  FaXTwitter,
+  FaInstagram,
 } from "react-icons/fa6";
 import ContactUsForm from "./ContactUsForm";
 import { gsap } from "gsap";
@@ -99,8 +101,7 @@ const ContactUs = () => {
           ease: "power3.out",
           scrollTrigger: {
             trigger: formRef.current,
-            start: "top 85%",
-            scrub: 1,
+            start: "top 100%",
             toggleActions: "play none none none",
           },
         });
@@ -150,18 +151,27 @@ const ContactUs = () => {
               Reach out on
             </h1>
             <div className="flex items-center gap-[30px] max-sm:gap-[15px]">
-              <FaLinkedin
-                className="md:text-[18px] cursor-pointer text-[24px]"
-                color="#5378D0"
-              />
-              <FaFacebook
-                className="md:text-[18px] cursor-pointer text-[24px]"
-                color="#4C8AFF"
-              />
-              <FaTwitter
-                className="md:text-[18px] cursor-pointer text-[24px]"
-                color="#4CD2FF"
-              />
+              <a
+                href="https://www.linkedin.com/company/tresh-tech/"
+                target="_blank"
+              >
+                <FaLinkedin
+                  className="md:text-[18px] cursor-pointer text-[24px]"
+                  color="#5378D0"
+                />
+              </a>
+              <a href="https://www.instagram.com/tresh_tech/" target="_blank">
+                <FaInstagram
+                  className="md:text-[18px] cursor-pointer text-[24px]"
+                  color="#4C8AFF"
+                />
+              </a>
+              <a href="https://x.com/tresh_tech" target="_blank">
+                <FaXTwitter
+                  className="md:text-[18px] cursor-pointer text-[24px]"
+                  color="#000000"
+                />
+              </a>
             </div>
           </div>
           <div

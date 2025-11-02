@@ -193,9 +193,9 @@ const AboutUs = () => {
         <div className="flex flex-wrap gap-[50px] justify-around items-center">
           <div
             ref={card1Ref}
-            className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
+            className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex items-center"
           >
-            <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
+            <div className="flex flex-1 flex-col gap-2 md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 1. Client Meeting
               </h1>
@@ -214,7 +214,7 @@ const AboutUs = () => {
             ref={card2Ref}
             className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
-            <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
+            <div className="flex flex-col gap-2 md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 2. Quotation
               </h1>
@@ -237,7 +237,7 @@ const AboutUs = () => {
             ref={card3Ref}
             className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
-            <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
+            <div className="flex flex-col gap-2 md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 3. Software Development
               </h1>
@@ -256,7 +256,7 @@ const AboutUs = () => {
             ref={card4Ref}
             className="max-w-[500px] min-h-[170px] border border-black/20 shadow-md rounded-[10px] w-full flex justify-between items-center"
           >
-            <div className="flex flex-col gap-2 max-w-[200px] md:max-w-[400px] w-full py-2.5 px-5">
+            <div className="flex flex-col gap-2 md:max-w-[400px] w-full py-2.5 px-5">
               <h1 className="font-medium text-[20px] leading-[24px] ">
                 4. Launch
               </h1>

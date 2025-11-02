@@ -25,9 +25,14 @@ const AllProjectsDetails = () => {
       </div>
       <div className="flex border flex-col-reverse md:flex-row flex-grow border-[#D9D9D9] md:h-[210px] py-5 items-center justify-between w-full rounded-lg shadow-sm pl-5">
         <div className="flex flex-col max-w-[630px]">
-          <h2 className="text-[32px] leading-[36px] font-semibold">
-            {data.title}
-          </h2>
+          <div className="flex w-auto gap-2 items-center">
+            <h2 className="text-[32px] leading-[36px] font-semibold">
+              {data.title}
+            </h2>
+            <span className="text-xs bg-blue-100 px-3 py-[2px] rounded-xl">
+              {data.pjType}
+            </span>
+          </div>
           <p className="text-[#4D4D4D] mt-5 font-normal">
             {/* {details.description.split("\n").map((paragraph, index) => (
           <p key={index} className="mt-4">

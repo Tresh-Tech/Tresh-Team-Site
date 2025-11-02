@@ -15,7 +15,7 @@ import Error404Pg from "./Pages/Error404Pg/Error404Pg";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col overflow-x-hidden">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
